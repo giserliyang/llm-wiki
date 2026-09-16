@@ -1,0 +1,13 @@
+# Python
+.venv/
+venvs/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Obsidian workspace（可选保留，可按需取消注释）
+# .obsidian/workspace.json
+# .obsidian/workspace-mobile.json

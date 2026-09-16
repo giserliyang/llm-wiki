@@ -1,0 +1,10 @@
+{
+	"id": "copy-outline",
+	"name": "Copy Outline",
+	"version": "1.0.4",
+	"minAppVersion": "0.16.2",
+	"description": "Adds a button to copy the current note's outline to clipboard.",
+	"author": "Yoav Ravid",
+	"authorUrl": "https://x.com/YoavRavid",
+	"isDesktopOnly": false
+}

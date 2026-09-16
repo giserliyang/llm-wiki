@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789111044372-92dsnsy8y",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789111044560-jwznhpi",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789111044366-mgzv4op",
+      "timestamp": 1789111044366,
+      "rawDisplayText": "你好",
+      "canonicalText": "你好",
+      "images": [],
+      "contentDigest": "815b1925f3db319cfc8ef8cad8a91b3f8b512f630d8f82635cb105e93e666c2a",
+      "providerUserMessageId": "9d492d4a-1e34-4a84-ad84-66ab8d182fe6",
+      "providerAssistantMessageId": "07b9b3a6-fe5f-462a-851b-147f1a736298"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789111062048-vtnt7z6",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1789111062045-145siq8",
+      "timestamp": 1789111062045,
+      "rawDisplayText": "你是谁",
+      "canonicalText": "你是谁",
+      "images": [],
+      "contentDigest": "a606caaea3f27f473956d0f27ba7df90dd64ca63190d8444c9d7b02e96e08240",
+      "providerUserMessageId": "a1c416f0-fef9-421e-acaf-45d9afa8a7d4",
+      "providerAssistantMessageId": "e8f2848e-63b6-48c9-859b-056d05a5370e"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "main": {
+    "id": "a69a455be951a2ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0cac237984918b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ec3f7b7f1811630b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "86b4f1f9436c4502",
+    "type": "split",
+    "children": [
+      {
+        "id": "a593930ae84e2965",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "614475cb05a3256f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "364a1e68dc546c46",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#工具",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "351734b0c8b8e994",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 310.5
+  },
+  "right": {
+    "id": "df4dfda42800c66b",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3bb9b773b5bba58",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5e6dc3ace0c72189",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "2d4fcd73e60fd413",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "0258cc7cd41a582d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "4dcb414c8c398255",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {
+                "tabWorkspace": {
+                  "version": 1,
+                  "openTabs": [
+                    {
+                      "tabId": "tab-1789466319836-v1qivav",
+                      "conversationId": null,
+                      "draftModel": "opus"
+                    }
+                  ],
+                  "activeTabId": "tab-1789466319836-v1qivav"
+                }
+              },
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          },
+          {
+            "id": "75a3ffa10723ebc0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "raw/videos/工作流/工作流 04：如何实现流程表单的展示？.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "36e5d02f5a0974ed",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "raw/videos/工作流/工作流 04：如何实现流程表单的展示？.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 381.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "realclaudian:Open Claudian": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "614475cb05a3256f",
+  "lastOpenFiles": [
+    "dashboards/学习仪表盘.md",
+    "templates/append-tutorial-appendix.md",
+    "templates/quick-capture.md",
+    "templates/append-bookmark-appendix.md",
+    "notes/inbox",
+    "dashboards/素材收件箱.md",
+    "templates/wiki-page.md",
+    "raw/videos/从零开始 01：视频课程导读：项目简介、功能列表、技术选型.md",
+    "media-lib/bilibili BV1W5mzBAEwj.md",
+    "raw/videos/日本梅毒大爆发 艾呀 梅事哒！.md",
+    "raw/bookmarks/Threejs中的WebGPU实践（1-2）.md",
+    "raw/README.md",
+    "media-lib/从零开始 01：视频课程导读：项目简介、功能列表、技术选型.md",
+    "media-lib/工作流 04：如何实现流程表单的展示？.md",
+    "templates/append-video-appendix.md",
+    "media-lib",
+    "raw/videos/工作流 04：如何实现流程表单的展示？.md",
+    "templates/raw-video.md",
+    "notes/README.md",
+    "templates/raw-bookmark.md",
+    "templates/raw-tutorial.md",
+    "prompt/writeback.md",
+    "prompt/templater-reading-progress.md",
+    "prompt/ingest.md",
+    "prompt/lint.md",
+    "prompt/claudian-cheatsheet.md",
+    "templates/raw-tutorial~~.md",
+    "notes/笔记名.md",
+    "raw/videos/工作流/工作流 04：如何实现流程表单的展示？.srt",
+    "raw/videos/工作流",
+    "scripts/_rebuild_oauth01.py",
+    "scripts/_rebuild_oauth06.py",
+    "raw/videos/芋道源码/OAuth2.0 授权/OAuth2.0 授权 01：快速入门 OAuth 2.0 授权？.srt",
+    "raw/videos/芋道源码/OAuth2.0 授权",
+    "raw/videos/芋道源码",
+    "raw/videos/芋道源码/OAuth2.0 授权/OAuth2.0 授权 06：退出时，如何删除 Token 令牌？.srt",
+    "raw/tutorials/Python_V3.0/images/document_image_rId102.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId12.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId119.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId118.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId117.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId116.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId115.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId105.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId104.png",
+    "raw/tutorials/Python_V3.0/images/document_image_rId103.png"
+  ]
+}

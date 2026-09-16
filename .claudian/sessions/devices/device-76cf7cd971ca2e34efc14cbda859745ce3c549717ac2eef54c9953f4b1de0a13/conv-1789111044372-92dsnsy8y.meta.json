@@ -1,0 +1,23 @@
+{
+  "id": "conv-1789111044372-92dsnsy8y",
+  "providerId": "claude",
+  "title": "Greeting Exchange",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789111044373,
+  "lastActivityAt": 1789111068159,
+  "sessionId": "7313cf22-d3f9-4cef-b670-d5af506080e1",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "7313cf22-d3f9-4cef-b670-d5af506080e1"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 120,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 25088,
+    "contextWindow": 200000,
+    "contextTokens": 25208,
+    "percentage": 13,
+    "contextWindowIsAuthoritative": true
+  }
+}
