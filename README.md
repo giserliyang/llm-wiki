@@ -24,6 +24,9 @@ wiki/         结构化知识层（LLM 主导写入，人审核）
   practice/   实战总结
 
 notes/        个人原子笔记层（你亲手写，LLM 只可建议不可覆盖）
+  inbox/      灵感随手记（周清：升原子笔记 / 收 bookmark / 丢）
+  essays/     自己写的长文总结（type: essay）
+  （根下）    短原子笔记
 dashboards/   Dataview 仪表盘（只查不写）
 templates/    模板
 prompt/       LLM 提示词（ingest / lint）
@@ -32,14 +35,14 @@ report/       校验报告
 AGENTS.md     LLM 操作规则（强制）
 ```
 
-## 两条工作流
+## 三条工作流
 
 ### A. 读教程 / 剪文章（个人笔记主路径）
 
 1. 把原文放进 `raw/` 对应目录，命名：`YYYYMMDD_主题_来源.md`
-2. 用模板 `templates/tutorial-raw.md` 补 Frontmatter + 阅读进度清单
-3. 用 Copy Outline 复制章节骨架 → 粘到「阅读进度」改成任务清单，标优先级
-4. **真正卡住时**才建原子笔记 → `notes/`，用模板 `templates/atomic-note.md`
+2. 剪藏或粘贴正文后，文末用 Templater 插入 `append-tutorial-appendix` / `append-bookmark-appendix` / `append-video-appendix`；或从零建笔记用 `raw-*` 模板
+3. 需要时用 `gen-reading-progress` 生成阅读进度清单
+4. **真正卡住时**才建原子笔记 → `notes/`，用模板 `atomic-note`
 5. YAML 写 `source: "[[原文]]"`，正文写 `[[原文#章节]]`
 6. 实战后才改 `understanding_level` / `need_practice` / `last_review`
 
@@ -50,6 +53,12 @@ AGENTS.md     LLM 操作规则（强制）
    > 读 raw/xxx，按 AGENTS.md 更新 wiki/，生成 diff/ 待审，不要改 raw/ 和 notes/
 3. 你在 Obsidian 审核 diff，通过后覆盖 wiki 页面
 4. 优质问答结果可回写 wiki（查询 → 合成 → 回写）
+
+### C. 灵感随手记 + 自己的总结
+
+1. **随手记**：`notes/inbox/` + 模板 `quick-capture`，30 秒写完；**每周清空**
+2. **短概念**：`notes/` + `atomic-note`（可挂 `source`）
+3. **长文总结**：`notes/essays/` + `essay`（`type: essay`，纯原创可不挂 source）
 
 ## 原子笔记 Frontmatter 字段
 

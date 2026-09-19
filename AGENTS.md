@@ -15,13 +15,13 @@
 
 7. wiki 页面必须使用模板 `templates/wiki-page.md` 的 Frontmatter 结构。
 8. 更新后必须同步检查 `wiki/overview.md` 与 `wiki/links.md` 索引。
-9. 生成变更时优先写入 `diff/YYYYMMDD_页面名_diff.md`，等待人审核后再覆盖 `wiki/` 正文。
+9. 生成变更时优先写入 `diff/YYYYMMDD_主题_diff.md`，等待人审核后再覆盖 `wiki/` 正文。人审合并进 `wiki/` 后由用户删除该 diff（不设 `diff/accepted/` 归档目录）。
 10. 重要页面（决策、故障）修改必须产出 diff，不得静默覆盖。
 
 ## 与个人笔记的关系
 
 11. LLM 可从 raw 素材提炼 `wiki/` 概念页；不得代替用户写 `notes/` 原子笔记。
-12. 若发现某 wiki 概念适合被用户拆成原子笔记，可在 diff 中给出建议笔记骨架，放入 `diff/suggestions/`，由人决定是否采纳。
+12. 若发现某 wiki 概念适合被用户拆成原子笔记，可在 diff 中给出建议笔记骨架，放入 `diff/suggestions/`，由人决定是否采纳。**建议骨架必须对齐 `templates/node-atomic-note.md`**：YAML 字段名与取值约定一致（`title` / `tags` / `status` / `understanding_level` / `need_practice` / `last_review` / `source` / `source_type` / `source_url` / `aliases`）；`source` 使用双链写法（如 `"[[raw/bookmarks/xxx]]"`），禁止用相对路径字符串；`tags` 用 YAML 列表且只写主题；正文小节固定为「我的理解 / 要点 / 疑问 / 待验证 / 实战记录 / 关联」；「相关 wiki」写在「关联」正文里，不要发明 `related_wiki` 等模板外 YAML 字段。建议中的 `understanding_level` 一律写 `1`，`status` 一律 `未读`，由用户按行为修改。
 13. wiki 页面中的 `related_notes` 可指向 `notes/` 中已存在的双链，但不得伪造不存在的笔记名（除非在「建议新建」中明确列出）。
 
 ## 摄入（Ingest）默认行为
