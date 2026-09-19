@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d7659a90fd0b8d45",
+        "id": "8d5cfc87aec6e5fe",
         "type": "tabs",
         "children": [
           {
-            "id": "868e49d34a199c7d",
+            "id": "e62360f14d34ef8a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/LLM Wiki 的回写闭环怎么写.md",
+                "file": "wiki/overview.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "LLM Wiki 的回写闭环怎么写"
+              "title": "overview"
             }
           }
         ]
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:LLM Wiki",
+                "query": "\"冤大头\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/LLM Wiki 的回写闭环怎么写.md",
+                "file": "wiki/overview.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -148,11 +148,11 @@
                   "version": 1,
                   "openTabs": [
                     {
-                      "tabId": "tab-1789814173643-4xrj7bn",
-                      "conversationId": "conv-1789814248689-urqk6rciq"
+                      "tabId": "tab-1789824632768-scg8kou",
+                      "conversationId": "conv-1789824666149-ynkhf3s7f"
                     }
                   ],
-                  "activeTabId": "tab-1789814173643-4xrj7bn"
+                  "activeTabId": "tab-1789824632768-scg8kou"
                 }
               },
               "icon": "bot",
@@ -221,35 +221,37 @@
       "obsidian-spaced-repetition:复习卡片": false
     }
   },
-  "active": "868e49d34a199c7d",
+  "active": "614475cb05a3256f",
   "lastOpenFiles": [
+    "wiki/links.md",
+    "wiki/glossary.md",
+    "wiki/overview.md",
+    "raw/tutorials/python/20260919_Python教程_尚硅谷.md",
+    "wiki/entities/Dataview.md",
+    "wiki/concepts/三层架构.md",
     "wiki/comparisons/LLM-Wiki-vs-RAG.md",
+    "raw/tutorials/python/Python（V3.0).md",
+    "notes/README.md",
     "raw/bookmarks/别再用RAG当“冤大头”！Karpathy的LLM Wiki——知识管理的新解法-腾讯云开发者社区-腾讯云.md",
-    "notes/LLM Wiki 的回写闭环怎么写.md",
+    "diff/README.md",
+    "notes/伪 Wiki 的 5 个坑.md",
+    "notes/inbox/第一条随手记.md",
+    "notes/essays/原子笔记法.md",
+    "dashboards/素材收件箱.md",
     "diff/suggestions/20260912_LLMWiki_原子笔记骨架建议.md",
     "diff/accepted/20260912_llm_wiki_karpathy_diff.md",
-    "notes/伪 Wiki 的 5 个坑.md",
-    "templates/node-atomic-note.md",
-    "wiki/concepts/LLM-Wiki.md",
+    "wiki/entities/Obsidian.md",
     "wiki/concepts/原子笔记.md",
-    "wiki/concepts/三层架构.md",
-    "AGENTS.md",
-    "notes/RAG vs LLM Wiki vs GraphRAG 选型决策.md",
-    "README.md",
-    "diff/suggestions/llm-wiki-vs-rag-suggestion.md",
-    "diff/suggestions/karpathy-workflow-suggestion.md",
-    "raw/bookmarks/别再用RAG当“冤大头“！Karpathy的LLM Wiki——知识管理的新解法-腾讯云开发者社区-腾讯云.md",
-    "diff/20260919_llm_wiki_karpathy_diff.md",
-    "wiki/overview.md",
-    "diff/suggestions/20260919_karpathy_llm_wiki_建议.md",
-    "wiki/comparisons/RAG-vs-LLM-Wiki-vs-GraphRAG.md",
-    "diff/accepted/20260919_llm_wiki_karpathy_diff.md",
-    "diff/suggestions/20260919_llm_wiki_vs_rag_骨架.md",
-    "diff/suggestions/20260919_llm_wiki_workflow_骨架.md",
-    "diff/accepted",
+    "wiki/concepts/LLM-Wiki.md",
     "notes/essays/llm-wiki搭建实录.md",
-    "notes/essays/原子笔记法.md",
-    "diff/suggestions/LLM-Wiki案例骨架.md",
+    "notes/RAG vs LLM Wiki vs GraphRAG 选型决策.md",
+    "notes/LLM Wiki 的回写闭环怎么写.md",
+    "dashboards/学习仪表盘.md",
+    "prompt/ingest.md",
+    "raw/bookmarks/别再用RAG当\"冤大头\"！Karpathy的LLM Wiki——知识管理的新解法-腾讯云开发者社区-腾讯云.md",
+    "wiki/entities/python",
+    "wiki/concepts/python",
+    "diff/accepted",
     "wiki/entities/Python.md.tmp.28723.adbadc81e33c",
     "raw/tutorials/python/images/document_image_rId99.png",
     "raw/tutorials/python/images/document_image_rId98.png",
@@ -266,8 +268,6 @@
     "raw/tutorials/未命名文件夹",
     "raw/tutorials/images",
     "notes/essays",
-    "notes/inbox",
-    "raw/videos/工作流/工作流 04：如何实现流程表单的展示？.srt",
-    "raw/videos/工作流"
+    "notes/inbox"
   ]
 }

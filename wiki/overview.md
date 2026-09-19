@@ -4,7 +4,6 @@ status: ready
 kind: overview
 tags:
   - wiki
-  - moc
 last_reviewed: 2026-09-11
 ---
 

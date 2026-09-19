@@ -4,7 +4,6 @@ status: ready
 kind: links
 tags:
   - wiki
-  - moc
 ---
 
 # 全局链接索引
@@ -13,15 +12,7 @@ tags:
 
 ## 按主题
 
-### 知识管理
-- [[wiki/concepts/LLM-Wiki]]
-- [[wiki/concepts/原子笔记]]
-- [[wiki/concepts/三层架构]]
-- [[wiki/comparisons/LLM-Wiki-vs-RAG]]
 
-### 工具
-- [[wiki/entities/Obsidian]]
-- [[wiki/entities/Dataview]]
 
 ## 自动：所有概念页
 
