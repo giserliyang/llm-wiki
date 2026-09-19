@@ -18,3 +18,5 @@ tags:
 | Dataview | Dataview | 把笔记当数据库查询的 Obsidian 插件 | [[wiki/entities/Dataview]] |
 | Frontmatter | YAML Frontmatter | 文件头 `---` 区元数据，给工具检索用 | |
 | understanding_level | | 0–5 掌握度，行为结果不是阅读次数 | [[dashboards/学习仪表盘]] |
+| RAG | Retrieval-Augmented Generation | 查询时临时检索素材并合成答案，结论不积累 | [[wiki/comparisons/LLM-Wiki-vs-RAG]] |
+| GraphRAG | Graph-based RAG | Microsoft 提出的基于实体关系图的大规模知识检索方案 | [[wiki/comparisons/LLM-Wiki-vs-RAG]] |

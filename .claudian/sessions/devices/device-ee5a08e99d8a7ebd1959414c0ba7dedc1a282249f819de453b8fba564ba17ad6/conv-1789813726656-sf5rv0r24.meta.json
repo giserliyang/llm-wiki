@@ -1,0 +1,25 @@
+{
+  "id": "conv-1789813726656-sf5rv0r24",
+  "providerId": "claude",
+  "title": "Update LLM Wiki docs from Karpathy bookmark",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789813726660,
+  "lastActivityAt": 1789813893293,
+  "sessionId": "d6db66df-3e97-492c-a3fe-7f6f454f3ea8",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "d6db66df-3e97-492c-a3fe-7f6f454f3ea8"
+  },
+  "isPinned": false,
+  "isArchived": true,
+  "usage": {
+    "model": "opus",
+    "inputTokens": 342,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 47360,
+    "contextWindow": 200000,
+    "contextTokens": 47702,
+    "percentage": 24,
+    "contextWindowIsAuthoritative": true
+  }
+}

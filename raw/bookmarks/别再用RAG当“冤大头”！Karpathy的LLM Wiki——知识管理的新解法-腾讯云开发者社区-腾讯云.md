@@ -11,10 +11,6 @@ author:
 
 ## 别再用RAG当“冤大头”！Karpathy的LLM Wiki——知识管理的新解法
 
-2.7K
-
-举报
-
 ## Karpathy的LLM Wiki深度拆解：从理念到落地，如何构建可进化的知识底座
 
 最近圈子里都在聊Karpathy的LLM Wiki，不少人把它和RAG搞混，甚至觉得这只是个“花里胡哨的笔记技巧”——说实话，这是没get到核心。

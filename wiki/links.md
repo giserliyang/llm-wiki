@@ -17,6 +17,7 @@ tags:
 - [[wiki/concepts/LLM-Wiki]]
 - [[wiki/concepts/原子笔记]]
 - [[wiki/concepts/三层架构]]
+- [[wiki/comparisons/LLM-Wiki-vs-RAG]]
 
 ### 工具
 - [[wiki/entities/Obsidian]]

@@ -1,0 +1,23 @@
+{
+  "id": "conv-1789814248689-urqk6rciq",
+  "providerId": "claude",
+  "title": "Ingest LLM Wiki bookmark and generate diff",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789814248692,
+  "lastActivityAt": 1789818658469,
+  "sessionId": "afc0f810-ed2e-4032-9a8a-ad60e91a5748",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "afc0f810-ed2e-4032-9a8a-ad60e91a5748"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 1294,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 58880,
+    "contextWindow": 200000,
+    "contextTokens": 60174,
+    "percentage": 30,
+    "contextWindowIsAuthoritative": true
+  }
+}
