@@ -19,6 +19,7 @@
 6. **不要直接改 `raw/` 与 `notes/`**。
 7. 将变更写成 `diff/YYYYMMDD_主题_diff.md`，格式清晰，便于人审后手动合并。
 8. 若适合个人继续精读，可在 `diff/suggestions/` 给出 1–3 条原子笔记骨架建议（仅建议）。
+9. 请使用中文
 
 素材类型提示：
 - `source_type: tutorial` → 偏概念拆解 + 步骤

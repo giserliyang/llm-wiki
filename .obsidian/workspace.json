@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8d5cfc87aec6e5fe",
+        "id": "8e45e56168cf5fbb",
         "type": "tabs",
         "children": [
           {
-            "id": "e62360f14d34ef8a",
+            "id": "12043a1dfff981de",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/overview.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "overview"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -56,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"冤大头\"",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -129,7 +124,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/overview.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -148,11 +142,16 @@
                   "version": 1,
                   "openTabs": [
                     {
-                      "tabId": "tab-1789824632768-scg8kou",
-                      "conversationId": "conv-1789824666149-ynkhf3s7f"
+                      "tabId": "tab-1789829039319-436iu18",
+                      "conversationId": "conv-1789829048600-0scpnyuzn"
+                    },
+                    {
+                      "tabId": "tab-1789908551147-tgrx46h",
+                      "conversationId": null,
+                      "draftModel": "opus"
                     }
                   ],
-                  "activeTabId": "tab-1789824632768-scg8kou"
+                  "activeTabId": "tab-1789829039319-436iu18"
                 }
               },
               "icon": "bot",
@@ -179,9 +178,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "raw/tutorials/Python（V3.0).md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "wiki/overview.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -198,12 +197,12 @@
             "state": {
               "type": "review-queue-list-view",
               "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "笔记复习序列"
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -217,38 +216,39 @@
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
       "realclaudian:Open Claudian": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-spaced-repetition:复习卡片": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "614475cb05a3256f",
+  "active": "12043a1dfff981de",
   "lastOpenFiles": [
-    "wiki/links.md",
-    "wiki/glossary.md",
-    "wiki/overview.md",
-    "raw/tutorials/python/20260919_Python教程_尚硅谷.md",
-    "wiki/entities/Dataview.md",
-    "wiki/concepts/三层架构.md",
-    "wiki/comparisons/LLM-Wiki-vs-RAG.md",
-    "raw/tutorials/python/Python（V3.0).md",
-    "notes/README.md",
-    "raw/bookmarks/别再用RAG当“冤大头”！Karpathy的LLM Wiki——知识管理的新解法-腾讯云开发者社区-腾讯云.md",
-    "diff/README.md",
-    "notes/伪 Wiki 的 5 个坑.md",
-    "notes/inbox/第一条随手记.md",
-    "notes/essays/原子笔记法.md",
-    "dashboards/素材收件箱.md",
-    "diff/suggestions/20260912_LLMWiki_原子笔记骨架建议.md",
-    "diff/accepted/20260912_llm_wiki_karpathy_diff.md",
-    "wiki/entities/Obsidian.md",
-    "wiki/concepts/原子笔记.md",
-    "wiki/concepts/LLM-Wiki.md",
-    "notes/essays/llm-wiki搭建实录.md",
-    "notes/RAG vs LLM Wiki vs GraphRAG 选型决策.md",
-    "notes/LLM Wiki 的回写闭环怎么写.md",
+    "notes/20260919_浅拷贝vs深拷贝的内存模型.md",
+    "diff/accepted/20260919_Python教程_尚硅谷_diff_第九轮.md",
     "dashboards/学习仪表盘.md",
-    "prompt/ingest.md",
-    "raw/bookmarks/别再用RAG当\"冤大头\"！Karpathy的LLM Wiki——知识管理的新解法-腾讯云开发者社区-腾讯云.md",
+    "notes/20260919_继承ProcessThread与target参数的两种风格.md",
+    "AGENTS.md",
+    "notes/20260919_with上下文管理器的完整协议.md",
+    "notes/20260919_队列vs管道的通信模型.md",
+    "notes/20260919_asyncio事件循环的工作流程.md",
+    "notes/20260919_yieldsendyieldfrom的协作机制.md",
+    "notes/20260919_tryexcept的完整执行路径.md",
+    "notes/20260919_装饰器与闭包的底层机制.md",
+    "notes/20260919_GIL的真相.md",
+    "notes/20260919_进程vs线程vs协程三层并发模型.md",
+    "notes/20260919_Python变量与语法基础.md",
+    "diff/suggestions/20260919_Python基础建议.md",
+    "diff/suggestions/20260919_Python完整教程原子笔记建议.md",
+    "wiki/concepts/python-函数.md",
+    "diff/20260919_Python教程_尚硅谷_diff_第十轮.md",
+    "diff/accepted/20260919_Python教程_尚硅谷_diff_第十轮.md",
+    "wiki/concepts/python-错误与异常.md",
+    "wiki/concepts/python.md",
+    "diff/20260919_Python教程_尚硅谷_diff.md",
+    "diff/accepted/20260919_Python教程_尚硅谷_diff_第八轮.md",
+    "diff/accepted/20260919_Python教程_尚硅谷_diff_第七轮.md",
+    "diff/accepted/20260919_Python教程_尚硅谷_diff_第六轮.md",
+    "diff/accepted/20260919_Python教程_尚硅谷_diff_第五轮.md",
+    "raw/tutorials/python数据分析",
+    "raw/tutorials/未命名文件夹",
     "wiki/entities/python",
     "wiki/concepts/python",
     "diff/accepted",
@@ -265,9 +265,7 @@
     "raw/tutorials/python/images/document_image_rId90.png",
     "raw/tutorials/python/images",
     "raw/tutorials/python",
-    "raw/tutorials/未命名文件夹",
     "raw/tutorials/images",
-    "notes/essays",
-    "notes/inbox"
+    "notes/essays"
   ]
 }
