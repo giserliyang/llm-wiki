@@ -1,9 +1,5 @@
 # 个人学习系统（Obsidian Vault）
 
-> **请用本目录作为 Obsidian Vault：**  
-> `C:\Users\HP\Documents\llm_wiki\llm-wiki`  
-> （外层 `Documents\llm_wiki` 里旧文件勿混用）
-
 > 一层 `wiki/` ｜ YAML 管掌握度 ｜ LLM 只出 `diff/`
 
 ```text
