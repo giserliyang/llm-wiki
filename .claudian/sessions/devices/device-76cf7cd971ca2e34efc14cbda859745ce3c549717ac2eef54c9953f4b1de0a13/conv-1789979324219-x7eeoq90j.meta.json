@@ -1,0 +1,25 @@
+{
+  "id": "conv-1789979324219-x7eeoq90j",
+  "providerId": "claude",
+  "title": "Ingest Python tutorial into wiki knowledge base",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789979324221,
+  "lastActivityAt": 1789986083196,
+  "sessionId": "359588b1-40e0-48ca-ac51-797bf9300953",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "359588b1-40e0-48ca-ac51-797bf9300953"
+  },
+  "isPinned": false,
+  "isArchived": true,
+  "usage": {
+    "model": "opus",
+    "inputTokens": 364,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 211200,
+    "contextWindow": 200000,
+    "contextTokens": 211564,
+    "percentage": 100,
+    "contextWindowIsAuthoritative": true
+  }
+}

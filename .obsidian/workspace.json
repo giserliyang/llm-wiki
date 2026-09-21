@@ -11,10 +11,10 @@
             "id": "12043a1dfff981de",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -142,16 +142,12 @@
                   "version": 1,
                   "openTabs": [
                     {
-                      "tabId": "tab-1789829039319-436iu18",
-                      "conversationId": "conv-1789829048600-0scpnyuzn"
-                    },
-                    {
                       "tabId": "tab-1789908551147-tgrx46h",
                       "conversationId": null,
                       "draftModel": "opus"
                     }
                   ],
-                  "activeTabId": "tab-1789829039319-436iu18"
+                  "activeTabId": "tab-1789908551147-tgrx46h"
                 }
               },
               "icon": "bot",
@@ -219,40 +215,38 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "12043a1dfff981de",
+  "active": "614475cb05a3256f",
   "lastOpenFiles": [
-    "notes/20260919_浅拷贝vs深拷贝的内存模型.md",
-    "diff/accepted/20260919_Python教程_尚硅谷_diff_第九轮.md",
-    "dashboards/学习仪表盘.md",
-    "notes/20260919_继承ProcessThread与target参数的两种风格.md",
-    "AGENTS.md",
-    "notes/20260919_with上下文管理器的完整协议.md",
-    "notes/20260919_队列vs管道的通信模型.md",
-    "notes/20260919_asyncio事件循环的工作流程.md",
-    "notes/20260919_yieldsendyieldfrom的协作机制.md",
-    "notes/20260919_tryexcept的完整执行路径.md",
-    "notes/20260919_装饰器与闭包的底层机制.md",
-    "notes/20260919_GIL的真相.md",
-    "notes/20260919_进程vs线程vs协程三层并发模型.md",
-    "notes/20260919_Python变量与语法基础.md",
-    "diff/suggestions/20260919_Python基础建议.md",
-    "diff/suggestions/20260919_Python完整教程原子笔记建议.md",
-    "wiki/concepts/python-函数.md",
-    "diff/20260919_Python教程_尚硅谷_diff_第十轮.md",
-    "diff/accepted/20260919_Python教程_尚硅谷_diff_第十轮.md",
-    "wiki/concepts/python-错误与异常.md",
-    "wiki/concepts/python.md",
-    "diff/20260919_Python教程_尚硅谷_diff.md",
-    "diff/accepted/20260919_Python教程_尚硅谷_diff_第八轮.md",
-    "diff/accepted/20260919_Python教程_尚硅谷_diff_第七轮.md",
-    "diff/accepted/20260919_Python教程_尚硅谷_diff_第六轮.md",
-    "diff/accepted/20260919_Python教程_尚硅谷_diff_第五轮.md",
-    "raw/tutorials/python数据分析",
-    "raw/tutorials/未命名文件夹",
-    "wiki/entities/python",
-    "wiki/concepts/python",
-    "diff/accepted",
-    "wiki/entities/Python.md.tmp.28723.adbadc81e33c",
+    "scripts/video_to_note.py",
+    "scripts",
+    "wiki/links.md",
+    "wiki/practice",
+    "wiki/overview.md",
+    "wiki/glossary.md",
+    "wiki/entities",
+    "wiki/decisions",
+    "wiki/concepts",
+    "wiki/comparisons",
+    "wiki/README.md",
+    "wiki",
+    "templates/wiki-page.md",
+    "templates/raw-video.md",
+    "templates/raw-tutorial.md",
+    "templates/raw-bookmark.md",
+    "templates/quick-capture.md",
+    "templates/prepend-video-yaml.md",
+    "templates/prepend-tutorial-yaml.md",
+    "templates/prepend-bookmark-yaml.md",
+    "templates/node-quick-capture.md",
+    "templates/node-essay.md",
+    "templates/node-concept.md",
+    "templates/node-atomic-note.md",
+    "templates/gen-reading-progress.md",
+    "templates/atomic-note.md",
+    "templates/append-video-appendix.md",
+    "templates/append-tutorial-appendix.md",
+    "templates/append-bookmark-appendix.md",
+    "templates",
     "raw/tutorials/python/images/document_image_rId99.png",
     "raw/tutorials/python/images/document_image_rId98.png",
     "raw/tutorials/python/images/document_image_rId97.png",
@@ -264,8 +258,10 @@
     "raw/tutorials/python/images/document_image_rId91.png",
     "raw/tutorials/python/images/document_image_rId90.png",
     "raw/tutorials/python/images",
-    "raw/tutorials/python",
-    "raw/tutorials/images",
-    "notes/essays"
+    "raw/tutorials/python/20260919_Python教程_尚硅谷.md",
+    "raw/tutorials/Python教程/images",
+    "raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md",
+    "raw/README.md",
+    "prompt/writeback.md"
   ]
 }

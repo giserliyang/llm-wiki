@@ -4,7 +4,7 @@ status: ready
 kind: overview
 tags:
   - wiki
-last_reviewed: 2026-09-19
+last_reviewed: 2026-09-11
 ---
 
 # LLM Wiki 总览
@@ -17,14 +17,14 @@ last_reviewed: 2026-09-19
 
 ## 怎么用
 
-| 你想…     | 去哪                   |     |
-| ------- | -------------------- | --- |
-| 看体系地图   | [[wiki/links]]       |     |
-| 查术语     | [[wiki/glossary]]    |     |
-| 学概念     | `wiki/concepts/`     |     |
-| 查工具/人物  | `wiki/entities/`     |     |
-| 看对比     | `wiki/comparisons/`  |     |
-| 看自己的掌握度 | [[dashboards/学习仪表盘]] |     |
+| 你想…     | 去哪                   |            |
+| ------- | -------------------- | ---------- |
+| 看体系地图   | [[wiki/links         | links]]    |
+| 查术语     | [[wiki/glossary      | glossary]] |
+| 学概念     | `wiki/concepts/`     |            |
+| 查工具/人物  | `wiki/entities/`     |            |
+| 看对比     | `wiki/comparisons/`  |            |
+| 看自己的掌握度 | [[dashboards/学习仪表盘]] |            |
 
 ## 核心概念
 
@@ -39,14 +39,6 @@ SORT file.mtime DESC
 ```dataview
 LIST
 FROM "wiki/entities"
-SORT file.name ASC
-```
-
-## 对比页
-
-```dataview
-LIST
-FROM "wiki/comparisons"
 SORT file.name ASC
 ```
 

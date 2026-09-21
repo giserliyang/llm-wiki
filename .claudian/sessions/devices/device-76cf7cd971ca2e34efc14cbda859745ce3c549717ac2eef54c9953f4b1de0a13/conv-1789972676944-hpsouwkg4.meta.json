@@ -1,0 +1,25 @@
+{
+  "id": "conv-1789972676944-hpsouwkg4",
+  "providerId": "claude",
+  "title": "Ingest Python tutorial Ch1-2 into Vault",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789972676946,
+  "lastActivityAt": 1789973356570,
+  "sessionId": "7ca0435c-85af-4b55-8470-bb19205e4f54",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "7ca0435c-85af-4b55-8470-bb19205e4f54"
+  },
+  "isPinned": false,
+  "isArchived": true,
+  "usage": {
+    "model": "opus",
+    "inputTokens": 119,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 64000,
+    "contextWindow": 200000,
+    "contextTokens": 64119,
+    "percentage": 32,
+    "contextWindowIsAuthoritative": true
+  }
+}

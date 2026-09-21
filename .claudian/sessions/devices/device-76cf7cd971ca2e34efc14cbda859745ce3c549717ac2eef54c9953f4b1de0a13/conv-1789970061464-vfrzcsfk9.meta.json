@@ -1,0 +1,26 @@
+{
+  "id": "conv-1789970061464-vfrzcsfk9",
+  "providerId": "claude",
+  "title": "Greeting in Chinese",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789970061468,
+  "lastActivityAt": 1789970745187,
+  "sessionId": "4ea9c61f-82ed-4eb0-a507-eccd84d987f2",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "4ea9c61f-82ed-4eb0-a507-eccd84d987f2"
+  },
+  "linkedContentPath": "raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md",
+  "isPinned": false,
+  "isArchived": true,
+  "usage": {
+    "model": "opus",
+    "inputTokens": 259,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 60672,
+    "contextWindow": 200000,
+    "contextTokens": 60931,
+    "percentage": 30,
+    "contextWindowIsAuthoritative": true
+  }
+}

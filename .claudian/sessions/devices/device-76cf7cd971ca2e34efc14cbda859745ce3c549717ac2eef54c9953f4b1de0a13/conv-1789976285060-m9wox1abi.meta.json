@@ -1,0 +1,26 @@
+{
+  "id": "conv-1789976285060-m9wox1abi",
+  "providerId": "claude",
+  "title": "Ingest Python tutorial into Vault wiki",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789976285063,
+  "lastActivityAt": 1789978800367,
+  "sessionId": "9d46ec82-db0e-4c18-935a-42b272d353ee",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "9d46ec82-db0e-4c18-935a-42b272d353ee"
+  },
+  "linkedContentPath": "AGENTS.md",
+  "isPinned": false,
+  "isArchived": true,
+  "usage": {
+    "model": "opus",
+    "inputTokens": 1398,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 113664,
+    "contextWindow": 200000,
+    "contextTokens": 115062,
+    "percentage": 58,
+    "contextWindowIsAuthoritative": true
+  }
+}

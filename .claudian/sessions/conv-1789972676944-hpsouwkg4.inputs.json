@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789972676944-hpsouwkg4",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789972676999-1vef4nt",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789972676937-smwm2ds",
+      "timestamp": 1789972676937,
+      "rawDisplayText": "按 Vault 根目录的 AGENTS.md 与 prompt/ingest.md 执行。\n\n读取：\nraw/tutorials/python/20260921_Python教程_尚硅谷.md\n\n范围：仅处理第 1 章「必备基础知识」与第 2 章「初识 Python」\n（计算机组成、语言与编译/解释、环境与运行方式等）。\n\n要求：\n1. 优先更新 wiki/ 中已有页；确无相关页再新建 wiki/concepts/ 等。\n2. YAML：kind、status、source: \"[[raw/tutorials/python教程/20260921_Python教程_尚硅谷]]\"、source_type: tutorial、tags 含 python；不要改我已填的 understanding_level/need_practice。\n3. 来源写法：[[raw/tutorials/python/20260921_Python教程_尚硅谷.md#章节标题]]\n4. 禁止修改 raw/；禁止修改 wiki/inbox；不要直接覆盖 wiki 正文。\n5. 全部变更写入：\n   diff/20260921_python_ch1_ch2_diff.md\n6. 若建议我手写笔记，只放 diff/suggestions/，YAML 与 node-atomic-note 对齐，且要点须有草稿。\n7. 最后 ≤8 行总结：新建/更新哪些页、diff 路径、1 条下一步。",
+      "canonicalText": "按 Vault 根目录的 AGENTS.md 与 prompt/ingest.md 执行。\n\n读取：\nraw/tutorials/python/20260921_Python教程_尚硅谷.md\n\n范围：仅处理第 1 章「必备基础知识」与第 2 章「初识 Python」\n（计算机组成、语言与编译/解释、环境与运行方式等）。\n\n要求：\n1. 优先更新 wiki/ 中已有页；确无相关页再新建 wiki/concepts/ 等。\n2. YAML：kind、status、source: \"[[raw/tutorials/python教程/20260921_Python教程_尚硅谷]]\"、source_type: tutorial、tags 含 python；不要改我已填的 understanding_level/need_practice。\n3. 来源写法：[[raw/tutorials/python/20260921_Python教程_尚硅谷.md#章节标题]]\n4. 禁止修改 raw/；禁止修改 wiki/inbox；不要直接覆盖 wiki 正文。\n5. 全部变更写入：\n   diff/20260921_python_ch1_ch2_diff.md\n6. 若建议我手写笔记，只放 diff/suggestions/，YAML 与 node-atomic-note 对齐，且要点须有草稿。\n7. 最后 ≤8 行总结：新建/更新哪些页、diff 路径、1 条下一步。",
+      "images": [],
+      "contentDigest": "7509b9dd16cb12f107fb6a3a81281de6c821ccb80b48a8058e5dd4fe55873697",
+      "providerUserMessageId": "928de017-bc80-4577-804a-21841d77192c",
+      "providerAssistantMessageId": "a1fe3f2d-abc2-4a42-bc99-76d492ecfbcc"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789973113928-95pf7al",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1789973113923-eoa9hsf",
+      "timestamp": 1789973113923,
+      "rawDisplayText": "我已审阅 diff/20260921_python_ch1_ch2_diff.md，同意合并。\n请按 AGENTS.md：将该 diff 应用到 wiki/；正文用我的表述也可；同步检查 wiki/overview.md 与 wiki/links.md；\n不要改 raw/ 与 wiki/inbox；完成后 ≤5 行总结。",
+      "canonicalText": "我已审阅 diff/20260921_python_ch1_ch2_diff.md，同意合并。\n请按 AGENTS.md：将该 diff 应用到 wiki/；正文用我的表述也可；同步检查 wiki/overview.md 与 wiki/links.md；\n不要改 raw/ 与 wiki/inbox；完成后 ≤5 行总结。",
+      "images": [],
+      "contentDigest": "cf9548c18778d7e1a49421899eb2e91c36d83df68cd1087a4e3a5ea24ad3f339",
+      "providerUserMessageId": "ca96a9e2-312a-4880-b646-4b48421c98f5",
+      "providerAssistantMessageId": "f5e960fe-e4b3-463f-87d8-bf904d8ef141"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789973292740-4n71oz8",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1789973292735-8zw17qu",
+      "timestamp": 1789973292735,
+      "rawDisplayText": "把 @diff/suggestions/python-ch1-ch2-suggestions.md 中的建议2录入comparisons文件夹",
+      "canonicalText": "把 @diff/suggestions/python-ch1-ch2-suggestions.md 中的建议2录入comparisons文件夹",
+      "images": [],
+      "contentDigest": "64df78ece520971c7629b06a250a75ee37e761040ccf1bf5fd96aa4d2ed2cf00",
+      "providerUserMessageId": "c2ca19b1-6523-406f-aae8-ceb9ab7edd2e",
+      "providerAssistantMessageId": "900b0fde-9159-432c-ab84-4e0dcd353670"
+    }
+  ]
+}

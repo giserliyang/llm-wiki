@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789970061464-vfrzcsfk9",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789970061690-6t45d3z",
+      "userTurnOrdinal": 1,
+      "state": "staged",
+      "localMessageId": "msg-1789970061459-baoux1b",
+      "timestamp": 1789970061459,
+      "rawDisplayText": "你好",
+      "canonicalText": "你好",
+      "context": {
+        "linkedContent": {
+          "path": "raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "815b1925f3db319cfc8ef8cad8a91b3f8b512f630d8f82635cb105e93e666c2a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789970303904-hvgmsrj",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789970303812-t8pix82",
+      "timestamp": 1789970303812,
+      "rawDisplayText": "你好",
+      "canonicalText": "你好",
+      "context": {
+        "linkedContent": {
+          "path": "raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "815b1925f3db319cfc8ef8cad8a91b3f8b512f630d8f82635cb105e93e666c2a",
+      "providerUserMessageId": "4858b17f-8ceb-4b42-add0-85f1a8d1603b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789970411043-md4jrgd",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1789970411039-bo5ovwd",
+      "timestamp": 1789970411039,
+      "rawDisplayText": "你好",
+      "canonicalText": "你好",
+      "images": [],
+      "contentDigest": "815b1925f3db319cfc8ef8cad8a91b3f8b512f630d8f82635cb105e93e666c2a",
+      "providerUserMessageId": "9c64ef0d-825f-4eee-bb41-e4a37ce0146b",
+      "providerAssistantMessageId": "96594bab-0516-45fa-abc2-6e419a3293d6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789970443543-ll1k8ol",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1789970443531-xkl6le5",
+      "timestamp": 1789970443531,
+      "rawDisplayText": "按 Vault 根目录的 AGENTS.md 与 prompt/ingest.md 执行。\n\n读取：\nraw/tutorials/python/20260921_Python教程_尚硅谷.md\n\n范围：仅处理第 1 章「必备基础知识」与第 2 章「初识 Python」\n（计算机组成、语言与编译/解释、环境与运行方式等）。\n\n要求：\n1. 优先更新 wiki/ 中已有页；确无相关页再新建 wiki/concepts/ 等。\n2. YAML：kind、status、source: \"[[raw/tutorials/python/20260921_Python教程_尚硅谷]]\"、source_type: tutorial、tags 含 python；不要改我已填的 understanding_level/need_practice。\n3. 来源写法：[[raw/tutorials/python/20260921_Python教程_尚硅谷.md#章节标题]]\n4. 禁止修改 raw/；禁止修改 wiki/inbox；不要直接覆盖 wiki 正文。\n5. 全部变更写入：\n   diff/20260921_python_ch1_ch2_diff.md\n6. 若建议我手写笔记，只放 diff/suggestions/，YAML 与 node-atomic-note 对齐，且要点须有草稿。\n7. 最后 ≤8 行总结：新建/更新哪些页、diff 路径、1 条下一步。",
+      "canonicalText": "按 Vault 根目录的 AGENTS.md 与 prompt/ingest.md 执行。\n\n读取：\nraw/tutorials/python/20260921_Python教程_尚硅谷.md\n\n范围：仅处理第 1 章「必备基础知识」与第 2 章「初识 Python」\n（计算机组成、语言与编译/解释、环境与运行方式等）。\n\n要求：\n1. 优先更新 wiki/ 中已有页；确无相关页再新建 wiki/concepts/ 等。\n2. YAML：kind、status、source: \"[[raw/tutorials/python/20260921_Python教程_尚硅谷]]\"、source_type: tutorial、tags 含 python；不要改我已填的 understanding_level/need_practice。\n3. 来源写法：[[raw/tutorials/python/20260921_Python教程_尚硅谷.md#章节标题]]\n4. 禁止修改 raw/；禁止修改 wiki/inbox；不要直接覆盖 wiki 正文。\n5. 全部变更写入：\n   diff/20260921_python_ch1_ch2_diff.md\n6. 若建议我手写笔记，只放 diff/suggestions/，YAML 与 node-atomic-note 对齐，且要点须有草稿。\n7. 最后 ≤8 行总结：新建/更新哪些页、diff 路径、1 条下一步。",
+      "images": [],
+      "contentDigest": "9e63d57c612a0f7047d0151dbbe12bcdfd4ac2601166ed5f1c67fa0dee287a05",
+      "providerUserMessageId": "4804a4a6-c31f-4cd3-88a4-c44063ccb9d9",
+      "providerAssistantMessageId": "5c0b98d2-ebac-4920-81c3-788aded6e8e7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789970676714-codjwoe",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1789970676707-ll5ec67",
+      "timestamp": 1789970676707,
+      "rawDisplayText": "我已审阅 diff/20260921_python_ch1_ch2_diff.md，同意合并。\n请按 AGENTS.md：将该 diff 应用到 wiki/；正文用我的表述也可；同步检查 wiki/overview.md 与 wiki/links.md；\n不要改 raw/ 与 wiki/inbox；完成后 ≤5 行总结。",
+      "canonicalText": "我已审阅 diff/20260921_python_ch1_ch2_diff.md，同意合并。\n请按 AGENTS.md：将该 diff 应用到 wiki/；正文用我的表述也可；同步检查 wiki/overview.md 与 wiki/links.md；\n不要改 raw/ 与 wiki/inbox；完成后 ≤5 行总结。",
+      "images": [],
+      "contentDigest": "cf9548c18778d7e1a49421899eb2e91c36d83df68cd1087a4e3a5ea24ad3f339",
+      "providerUserMessageId": "2c7eba17-e840-4ce3-ac56-8140935a9b18",
+      "providerAssistantMessageId": "4ff25863-fd45-41d8-91eb-50edc2cb1d6d"
+    }
+  ]
+}

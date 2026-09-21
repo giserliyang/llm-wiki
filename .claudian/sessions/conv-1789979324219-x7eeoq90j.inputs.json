@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789979324219-x7eeoq90j",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789979324276-45fk28m",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789979324213-26a3wkw",
+      "timestamp": 1789979324213,
+      "rawDisplayText": "按 Vault 根目录的 AGENTS.md 与 prompt/ingest.md 执行。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\n请你：\n1. 通读该文件，自行判断可沉淀的主题，不要假设我已指定章节或术语。\n2. 归类：\n   - 单一概念 → wiki/concepts/，YAML kind: concept\n   - 两者对比 → wiki/comparisons/，YAML kind: comparison\n   - 工具/人物/产品 → wiki/entities/，kind: entity\n   - 可执行步骤/清单 → wiki/practice/，kind: practice\n3. 同一主题优先更新 wiki/ 已有页，禁止重复建页。\n4. 总览类页若提到某一专页，只写摘要并 [[专页]]，不要复制整表。\n5. 每个可学习页 YAML 必须包含：\n   kind / status（未读）/ understanding_level（1）/ need_practice（true）/\n   last_review（今天）/ source / source_type（tutorial）/ tags\n   source 使用：\"[[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]\"\n6. 正文中的来源锚点使用完整路径，例如：\n   [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md#实际章节标题]]\n7. 禁止修改 raw/；禁止未经 diff 覆盖 wiki/ 正文。\n8. 全部变更写入：\n   diff/20260922_Python教程_尚硅谷_ingest_diff.md\n9. 用 ≤10 行总结：识别了哪些主题、各进了哪个目录、diff 路径、1 条下一步。",
+      "canonicalText": "按 Vault 根目录的 AGENTS.md 与 prompt/ingest.md 执行。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\n请你：\n1. 通读该文件，自行判断可沉淀的主题，不要假设我已指定章节或术语。\n2. 归类：\n   - 单一概念 → wiki/concepts/，YAML kind: concept\n   - 两者对比 → wiki/comparisons/，YAML kind: comparison\n   - 工具/人物/产品 → wiki/entities/，kind: entity\n   - 可执行步骤/清单 → wiki/practice/，kind: practice\n3. 同一主题优先更新 wiki/ 已有页，禁止重复建页。\n4. 总览类页若提到某一专页，只写摘要并 [[专页]]，不要复制整表。\n5. 每个可学习页 YAML 必须包含：\n   kind / status（未读）/ understanding_level（1）/ need_practice（true）/\n   last_review（今天）/ source / source_type（tutorial）/ tags\n   source 使用：\"[[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]\"\n6. 正文中的来源锚点使用完整路径，例如：\n   [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md#实际章节标题]]\n7. 禁止修改 raw/；禁止未经 diff 覆盖 wiki/ 正文。\n8. 全部变更写入：\n   diff/20260922_Python教程_尚硅谷_ingest_diff.md\n9. 用 ≤10 行总结：识别了哪些主题、各进了哪个目录、diff 路径、1 条下一步。",
+      "images": [],
+      "contentDigest": "cfc4b0b5c9bfc07b3c532e9bdccd5b33d9e9b2e1b7528d5d4ed0a24a03955896",
+      "providerUserMessageId": "ef2be97d-0f23-4e96-ada3-f4554e6eba67",
+      "providerAssistantMessageId": "d75b24ad-bf23-443a-9ec8-06fd3a56d160"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789983326373-hoil5wd",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1789983326364-x7vbpii",
+      "timestamp": 1789983326364,
+      "rawDisplayText": "我已审阅 diff/20260922_Python教程_尚硅谷_ingest_diff.md，同意合并。\n请按 AGENTS.md 将该 diff 应用到 wiki/；\n不要修改 raw/；不要直接改未经审核的其它 wiki 页；\n同步检查 wiki/overview.md 与 wiki/links.md；\n完成后 ≤5 行总结。",
+      "canonicalText": "我已审阅 diff/20260922_Python教程_尚硅谷_ingest_diff.md，同意合并。\n请按 AGENTS.md 将该 diff 应用到 wiki/；\n不要修改 raw/；不要直接改未经审核的其它 wiki 页；\n同步检查 wiki/overview.md 与 wiki/links.md；\n完成后 ≤5 行总结。",
+      "images": [],
+      "contentDigest": "488db6efa12b12ab34f33782cbac98164e16dd1992d3ea987ae22f288e38d7bc",
+      "providerUserMessageId": "21924a59-4e03-41bc-9017-d9906dfa2661",
+      "providerAssistantMessageId": "e7a32c28-4e1e-4593-b5f6-6850a29ecde6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789984593000-5owx794",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1789984592984-sjhqpgb",
+      "timestamp": 1789984592984,
+      "rawDisplayText": "按 Vault 根目录的 AGENTS.md 与 prompt/lint.md 执行，只读、不改任何文件。\n\n扫描范围：\nwiki/ 全部页面（重点：concepts、comparisons、entities、practice、根下笔记）\n\n检查项：\n1. 关键结论是否有 source 指向 raw/，或标明「待补充」\n2. 双链是否有效（是否指向不存在的页/路径错误）\n3. Frontmatter 是否符合规范：kind、status、understanding_level(0–5)、need_practice、last_review、source、source_type\n4. 同一主题是否存在重复页，或概念页与对比页整表重复\n5. overview.md、links.md 是否与当前 wiki 目录一致\n6. raw 与 wiki 的 source 路径是否一致（例如是否误写成与实际不符的目录）\n\n输出：\n写入 report/20260922_lint.md\n结构：阻断问题 / 应改进 / 建议合并 / 通过项摘要\n\n最后 ≤5 行总结：阻断项数量、report 路径、最优先的一条修改建议。",
+      "canonicalText": "按 Vault 根目录的 AGENTS.md 与 prompt/lint.md 执行，只读、不改任何文件。\n\n扫描范围：\nwiki/ 全部页面（重点：concepts、comparisons、entities、practice、根下笔记）\n\n检查项：\n1. 关键结论是否有 source 指向 raw/，或标明「待补充」\n2. 双链是否有效（是否指向不存在的页/路径错误）\n3. Frontmatter 是否符合规范：kind、status、understanding_level(0–5)、need_practice、last_review、source、source_type\n4. 同一主题是否存在重复页，或概念页与对比页整表重复\n5. overview.md、links.md 是否与当前 wiki 目录一致\n6. raw 与 wiki 的 source 路径是否一致（例如是否误写成与实际不符的目录）\n\n输出：\n写入 report/20260922_lint.md\n结构：阻断问题 / 应改进 / 建议合并 / 通过项摘要\n\n最后 ≤5 行总结：阻断项数量、report 路径、最优先的一条修改建议。",
+      "images": [],
+      "contentDigest": "3b633fce7310c8a8cc38d2fcb95f9b7613803ac2c2b13d74717b074317e97df7",
+      "providerUserMessageId": "dbf5cfc5-ff41-4b79-a861-f3741a4d4acf",
+      "providerAssistantMessageId": "ff034789-ade4-428e-8d1c-84f6508dcd93"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789985451161-8chr7zo",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1789985451151-zn5h82r",
+      "timestamp": 1789985451151,
+      "rawDisplayText": "读 report/20260922_lint.md 中「阻断问题」和「应改进」，\n按 AGENTS.md 生成修复 diff 到：\ndiff/20260922_lint_fix_diff.md\n只改问题涉及的 wiki 页；不要改 raw/；不要改我的 understanding_level/need_practice。",
+      "canonicalText": "读 report/20260922_lint.md 中「阻断问题」和「应改进」，\n按 AGENTS.md 生成修复 diff 到：\ndiff/20260922_lint_fix_diff.md\n只改问题涉及的 wiki 页；不要改 raw/；不要改我的 understanding_level/need_practice。",
+      "images": [],
+      "contentDigest": "eececd63099f2c2f08677eb59d51a66c07bc41949b914ef08d64c8fc9ea7803a",
+      "providerUserMessageId": "060ca6ff-864b-445a-be99-cc17f446aab0",
+      "providerAssistantMessageId": "9b2cfacc-663c-495b-9547-d62e78d05f1b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789985994216-80x66xh",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1789985994204-xrbnrpp",
+      "timestamp": 1789985994204,
+      "rawDisplayText": "我已审阅 diff/20260922_Python教程_尚硅谷_fix_diff.md，同意合并。\n请按 AGENTS.md 将该 diff 应用到 wiki/；\n不要修改 raw/；不要直接改未经审核的其它 wiki 页；\n同步检查 wiki/overview.md 与 wiki/links.md；\n完成后 ≤5 行总结。",
+      "canonicalText": "我已审阅 diff/20260922_Python教程_尚硅谷_fix_diff.md，同意合并。\n请按 AGENTS.md 将该 diff 应用到 wiki/；\n不要修改 raw/；不要直接改未经审核的其它 wiki 页；\n同步检查 wiki/overview.md 与 wiki/links.md；\n完成后 ≤5 行总结。",
+      "images": [],
+      "contentDigest": "bbe703b139c3eb5eb8793088c6a4215a4d566310171cbfbad3d33b98bbb2579c",
+      "providerUserMessageId": "92b90bdc-22aa-4e17-bc26-11f24b19aa3b",
+      "providerAssistantMessageId": "5f48a213-6761-45cb-b6d9-034257504d37"
+    }
+  ]
+}
