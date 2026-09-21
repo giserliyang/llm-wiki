@@ -1,0 +1,23 @@
+{
+  "id": "conv-1790000492291-g7thvh9yg",
+  "providerId": "claude",
+  "title": "Ingest tutorial article into wiki with manifest",
+  "titleGenerationStatus": "success",
+  "createdAt": 1790000492295,
+  "lastActivityAt": 1790000717851,
+  "sessionId": "e21a5fe8-0f76-4775-8071-db1d2b60e00b",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "e21a5fe8-0f76-4775-8071-db1d2b60e00b"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 306,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 45056,
+    "contextWindow": 200000,
+    "contextTokens": 45362,
+    "percentage": 23,
+    "contextWindowIsAuthoritative": true
+  }
+}

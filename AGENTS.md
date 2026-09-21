@@ -1,68 +1,109 @@
 # LLM 操作规则（AGENTS）
 
-本文件是本 Vault 的 Schema 层。任何写入 `wiki/` 的 LLM 会话必须遵守。
+Vault：**一层 `wiki/` 知识库**。掌握度写 **YAML**。`raw/` 只读。
 
-## 硬性禁令
+## 目录
 
-1. **禁止修改 `raw/` 目录**下任何文件，仅可读取。
-2. **禁止修改 `notes/` 目录**下任何文件（个人原子笔记由人维护）。最多在 diff 中「建议」新增链接或补充，不直接改。
-3. **禁止随意新建 wiki 页面**。优先更新已有页面；确无相关主题才新建。
-4. **禁止删除 wiki 页面**。如需废弃，将 `status` 改为 `废弃`，正文保留。
-5. **无来源不写入**。关键结论必须能追溯到 `raw/` 路径或明确标注「待补充/疑问」。
-6. **禁止强制无关链接**。关联必须语义相关。
+```
+raw/    外部素材只读
+wiki/   知识库（唯一知识层）
+  concepts/ entities/ comparisons/ decisions/ practice/
+  （根下）    note / essay 等
+  overview.md glossary.md links.md
+diff/   仅待审的 wiki 变更
+inbox/  （库根）临时速记，与 wiki 无关，LLM 勿碰
+```
 
-## 写入规范
+## 所有权
 
-7. wiki 页面必须使用模板 `templates/wiki-page.md` 的 Frontmatter 结构。
-8. 更新后必须同步检查 `wiki/overview.md` 与 `wiki/links.md` 索引。
-9. 生成变更时优先写入 `diff/YYYYMMDD_主题_diff.md`，等待人审核后再覆盖 `wiki/` 正文。人审合并进 `wiki/` 后由用户删除该 diff。
-10. 重要页面（决策、故障）修改必须产出 diff，不得静默覆盖。
+| 对象 | 规则 |
+| --- | ---: |
+| `raw/` | LLM 只读 |
+| `wiki/` 正文与 YAML | 人写/改（含审 diff 时合并） |
+| LLM 对 wiki 的变更 | 只写 `diff/`，人审后合入 |
 
-## 与个人笔记的关系
+## 双链与来源（强制）
 
-11. LLM 可从 raw 素材提炼 `wiki/` 概念页；不得代替用户写 `notes/` 原子笔记。
-12. 若发现某 wiki 概念适合被用户拆成原子笔记，可在 diff 中给出建议笔记骨架，放入 `diff/suggestions/`，由人决定是否采纳。
+### 1. YAML `source`（**文件级**，可不带 `#`）
 
-**对齐格式（必须）：** YAML 与 `templates/node-atomic-note.md` 字段一致（`title` / `tags` / `status` / `understanding_level` / `need_practice` / `last_review` / `source` / `source_type` / `source_url` / `aliases`）；`source` 用 `"[[raw/...]]"`，禁止相对路径；`tags` 只写主题；小节固定为「我的理解 / 要点 / 疑问 / 待验证 / 实战记录 / 关联」；不要发明 `related_wiki` 等模板外字段。
+```yaml
+source: "[[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]"
+```
 
-**必须有内容（禁止只贴空模板）：**
+- 路径与磁盘一致；禁止 `../raw/`、只写文件名、`[[同上]]`
+- **YAML 里不要带 `#章节`**（那是正文引用的事）
 
-- `title`：填具体建议标题，禁止空 `""`
-- `aliases`：可给 1 个可读别名
-- `last_review`：生成日期 `YYYY-MM-DD`
-- 正文 `#` 与 title 一致
-- 引导句写清拆解自哪篇 raw（完整 `[[...]]`）
-- **「我的理解」**：只写给用户的**思考问题/写什么**（例如「用自己的话写清：编译时机 vs 查询合成」），不要替用户写完整结论
-- **「要点」**：**必须写进从 raw 提炼的草稿要点**（分条，可含表格/步骤），供用户改写；禁止只留空 `-` 或模板占位
-- **「关联」**：写上相关 wiki 双链（真实存在的页面名）
-- 文件名：`YYYYMMDD_主题_建议.md` 或 `..._suggestions.md`，与内容一致
+### 2. 正文关键结论（**章/节级**，必须带单个 `#`）
 
-**禁止：** 复制 `node-atomic-note` 里的「（必须用自己的话…）」等空模板说明当正文；禁止把 `title` 留空；禁止要点区空白。
-13. wiki 页面中的 `related_notes` 可指向 `notes/` 中已存在的双链，但不得伪造不存在的笔记名（除非在「建议新建」中明确列出）。
+```markdown
+✅ [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷#第 5 章 函数]]
+✅ [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷#1.1. 硬件]]
+❌ [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]          ← 正文写结论时缺 #标题
+❌ [[第 5 章 函数]] / [[../raw/...]] / [[同上]]
+❌ [[raw/...尚硅谷#第 5 章 函数#1.1. 硬件]]                          ← 禁止两个 #，Obsidian 无法跳转
+```
 
-## 摄入（Ingest）默认行为
+- **只允许一个 `#`**；`#` 后必须是原文某行标题**全文**（含 `10.`、`1.1.`、`第 5 章` 等序号，**不得删序号**）
+- 示例：`#10. 浅拷贝 vs 深拷贝` 正确；`#浅拷贝 vs 深拷贝` 错误（缺 `10.`）
+- 每一处结论单独写完整链接；禁止简写、禁止双锚点
 
-对 `raw/` 中新文件：
-1. 识别类型（tutorial / video / bookmark / other）
-2. 提取核心概念、实体、可操作步骤、反例/陷阱
-3. 更新或新建对应 `wiki/concepts/`、`wiki/entities/` 页面
-4. 摘要不超过 7 句；结构化小标题；代码块保留并加「解决什么问题」注释倾向
-5. 不确定内容标记为 `> [!question] 待补充`
-6. 输出 diff 到 `diff/`
+### 3. Lint 必查
 
-## 校验（Lint）默认行为
+- YAML `source` 路径是否存在（不应含错误相对路径）
+- 正文是否出现无路径 `[[标题]]`
+- 正文章/节引用是否缺 `#` 或出现 **两个及以上 `#`**
 
-扫描 `wiki/`：
-- 无来源的关键结论
-- 无效/强行链接
-- Frontmatter 缺失或 status 非法
-- 同一概念多页矛盾
-- 过碎或过重复页面（给合并建议）
-- 报告写入 `report/YYYYMMDD_lint.md`
+## YAML（可学习 wiki 页必填）
 
-## 人格与语气
+| 字段 | 要求 |
+| --- | --- |
+| `kind` | concept / comparison / entity / practice / note / essay / decision / index |
+| `status` | 新建建议 `未读` |
+| `understanding_level` | 新建建议 `1` |
+| `need_practice` | 新建建议 `true` |
+| `last_review` | 入库日期 |
+| `source` | 见上「双链」规则 |
+| `source_type` | tutorial / video / bookmark / other |
+| `tags` | 主题标签 |
 
-- 中文为主，专有名词可保留英文
-- 先结论后细节
-- 不确定就说不确定
-- 不写营销腔、不堆砌空洞「重要性」
+用户已填的 mastery 字段，LLM 勿擅自改。
+
+## 目录类型
+
+| 主题 | 路径 | kind |
+| --- | ---: | --- |
+| 单概念 | `wiki/concepts/` | `concept` |
+| 两者对比 | `wiki/comparisons/` | `comparison` |
+| 总览提到专页 | 一句话 + `[[专页]]`，**不复制整表** |
+
+## 摄入 Ingest
+
+1. 读 `raw/`，自行提炼主题  
+2. 变更写入 **diff 包目录**（禁止用单文件 + 外层 ```markdown 包裹多页）：
+
+```text
+diff/<YYYYMMDD_主题>_ingest/
+  MANIFEST.md          # Meta + 变更清单（目标路径 ↔ 包内路径）+ 自检 + 总结
+  pages/
+    wiki/concepts/....md
+    wiki/comparisons/....md
+    ...
+    wiki/overview.md   # 仅需要时
+    wiki/links.md
+```
+
+3. `pages/` 下每个 md = **将来 wiki 的整页**（含 YAML 与内部代码块），路径与 vault 目标一致  
+3. 优先更新已有页；新建时在「关联」中链到**已有**相关 wiki 页（含其它 source 的页）  
+4. 禁止改 `raw/`；禁止未经 diff 包改 `wiki/` 正文  
+5. `wiki/overview.md`、`wiki/links.md` 用 **Dataview 动态列表**（TABLE/LIST + GROUP BY source），不要手写「关键主题」点名清单，避免与文件夹不一致  
+6. 合并：将 `pages/**` 复制到 vault 对应路径；`MANIFEST.md` 不进入 `wiki/`  
+
+人审合并后删除 diff 包。跨两套 raw 的互链可另开 diff 包做 `UPDATE`。
+
+## Lint
+
+扫描 `wiki/`：来源路径是否存在、**正文链接是否含路径与 `#章节`**、YAML、重复页、索引是否过期 → `report/`。
+
+## 语气
+
+中文，先结论，不确定就标出。

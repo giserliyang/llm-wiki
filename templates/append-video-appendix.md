@@ -6,9 +6,9 @@
 
 | 字段 | 值 |
 | --- | --- |
-| URL | <% tp.frontmatter.url ? tp.frontmatter.url : tp.frontmatter.source_url %> |
+| URL | <% tp.frontmatter.source_url ? tp.frontmatter.source_url : tp.frontmatter.url %> |
 | bvid | <% tp.frontmatter.bvid %> |
-| 平台 | Bilibili |
+| 平台 | |
 | 频道/UP主 | <% tp.frontmatter.author %> |
 | 时长 | |
 | 为什么看 | |
@@ -16,22 +16,20 @@
 
 ## 观看进度
 
-> 用 Templater `gen-reading-progress` 从字幕章节标题生成；或手写 3–8 条。  
-> 未勾选会出现在 [[dashboards/素材收件箱]]。  
-> 标记：✅ 已掌握 / 🔴 急需 / 🟡 了解即可 / ⚪ 暂跳过
+> Templater `gen-reading-progress` 或手写。未勾选 → [[dashboards/素材收件箱]]。
 
 - [ ] 
   - [ ] 
 
 ## 关键帧截图
 
-（图片放本视频文件夹 `images/`，命名 `01_主题.png`；外链图可直接贴 URL）
+（`images/`）
 
 ## 拆解索引
 
 ```dataview
 LIST
-FROM "notes"
+FROM "wiki"
 WHERE source = this.file.link
 SORT understanding_level DESC
 ```

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1790000492291-g7thvh9yg",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790000492350-krxx24x",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1790000492286-99q30oh",
+      "timestamp": 1790000492286,
+      "rawDisplayText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/bookmarks/python自动下载瓦片影像_python下载天地图瓦片.md\n\nsource_type：tutorial\n\ndiff 包目录：\ndiff/python自动下载瓦片影像_python下载天地图瓦片_ingest/\n\n要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。",
+      "canonicalText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/bookmarks/python自动下载瓦片影像_python下载天地图瓦片.md\n\nsource_type：tutorial\n\ndiff 包目录：\ndiff/python自动下载瓦片影像_python下载天地图瓦片_ingest/\n\n要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。",
+      "images": [],
+      "contentDigest": "5c1b156514c202778f913379edda737bab5b588cb5e23feb3b22711204d858d5",
+      "providerUserMessageId": "dd0136aa-d8b7-481b-b1dd-15895cf38a47",
+      "providerAssistantMessageId": "af767aa2-3bd8-48fe-a26f-c02686c00ae8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790000699693-vw1eq54",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1790000699686-w64xe9j",
+      "timestamp": 1790000699686,
+      "rawDisplayText": "我已审阅 diff/python自动下载瓦片影像_python下载天地图瓦片_ingest/MANIFEST.md，同意合并。\n\n按 AGENTS.md：\n1. 读 MANIFEST「变更清单」。\n2. 将包内 pages/** 按相对路径复制到 Vault 对应路径（CREATE 新建，UPDATE 覆盖）。\n3. 不要把 MANIFEST.md 写入 wiki/。\n4. 不要改 raw/；不要改我已填写的 understanding_level、need_practice、status、last_review（新建页默认值除外）。\n5. ≤5 行总结：写入了哪些路径、有无失败项。",
+      "canonicalText": "我已审阅 diff/python自动下载瓦片影像_python下载天地图瓦片_ingest/MANIFEST.md，同意合并。\n\n按 AGENTS.md：\n1. 读 MANIFEST「变更清单」。\n2. 将包内 pages/** 按相对路径复制到 Vault 对应路径（CREATE 新建，UPDATE 覆盖）。\n3. 不要把 MANIFEST.md 写入 wiki/。\n4. 不要改 raw/；不要改我已填写的 understanding_level、need_practice、status、last_review（新建页默认值除外）。\n5. ≤5 行总结：写入了哪些路径、有无失败项。",
+      "images": [],
+      "contentDigest": "ca4889d2aa1ab1ae75081b85fb23661372577ff2b69a290a0dbe494e37dc5a4d",
+      "providerUserMessageId": "5c948839-ac8a-4f7a-b8cd-292ddab3eea4",
+      "providerAssistantMessageId": "13ae462f-3819-4c3b-b819-f123b0d028c8"
+    }
+  ]
+}

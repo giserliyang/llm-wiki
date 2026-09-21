@@ -1,17 +1,19 @@
 ---
+kind: note
+tags: []
 created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 # <% tp.date.now("YYYY-MM-DD") %> 随手记
 
-> 30 秒记完即可，不必完整。周清时再决定：升为原子笔记 / 并入 wiki / 丢弃。
+> 库根 `inbox/` 临时记录，不进 wiki。周清：写成 wiki 页 / 进 raw / 丢弃。
 
 - 
 
 ---
 
-## 待处理（周清时勾）
+## 待处理
 
-- [ ] 值得留 → `notes/` 原子笔记
-- [ ] 只是链接/素材 → `raw/bookmarks/`
-- [ ] 可丢
+- [ ] 写成 `wiki/` 页（concept/comparison/note…）
+- [ ] 外链 → `raw/bookmarks/`
+- [ ] 丢

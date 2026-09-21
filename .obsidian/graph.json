@@ -1,7 +1,7 @@
 {
   "collapse-filter": false,
   "search": "path:raw OR path:notes OR path:wiki",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
@@ -35,10 +35,10 @@
   "nodeSizeMultiplier": 1.02449731903485,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.499106344950849,
+  "centerStrength": 0,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.5635830621432237,
+  "scale": 0.14512466146404115,
   "close": true
 }

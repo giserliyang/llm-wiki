@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789987814988-owhmuvp6z",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789987815081-tzt1kl4",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789987814981-i3jahne",
+      "timestamp": 1789987814981,
+      "rawDisplayText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\nsource_type：tutorial\n\ndiff 输出：\ndiff/20260922_Python教程_尚硅谷_ingest_diff.md",
+      "canonicalText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\nsource_type：tutorial\n\ndiff 输出：\ndiff/20260922_Python教程_尚硅谷_ingest_diff.md",
+      "images": [],
+      "contentDigest": "88044e32b34c92a3dbc08ec56a96bb00cdca7f7753ab34dc22d680adbd3e4733",
+      "providerUserMessageId": "0c1f10a7-382f-4786-b3bf-aef244d574eb",
+      "providerAssistantMessageId": "1ee276b4-b7be-40a4-99a3-0763a644a1a0"
+    }
+  ]
+}

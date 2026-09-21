@@ -1,0 +1,25 @@
+{
+  "id": "conv-1789991928715-lbqqrx6lr",
+  "providerId": "claude",
+  "title": "Ingest Python tutorial per AGENTS.md and ingest.md",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789991928717,
+  "lastActivityAt": 1789993364056,
+  "sessionId": "83608b9c-6675-4eb6-948c-a1bcd7cdb918",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "83608b9c-6675-4eb6-948c-a1bcd7cdb918"
+  },
+  "isPinned": false,
+  "isArchived": true,
+  "usage": {
+    "model": "opus",
+    "inputTokens": 277,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 165376,
+    "contextWindow": 200000,
+    "contextTokens": 165653,
+    "percentage": 83,
+    "contextWindowIsAuthoritative": true
+  }
+}

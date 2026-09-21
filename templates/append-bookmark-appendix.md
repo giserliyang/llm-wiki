@@ -12,9 +12,7 @@
 
 ## 阅读进度
 
-> 用 Templater `gen-reading-progress` 生成；纯「以后查」可删本段。  
-> 未勾选会出现在 [[dashboards/素材收件箱]]。  
-> 标记：✅ 已掌握 / 🔴 急需 / 🟡 了解即可 / ⚪ 暂跳过
+> 系统要学才保留。未勾选 → [[dashboards/素材收件箱]]。
 
 - [ ] 
   - [ ] 
@@ -23,7 +21,7 @@
 
 ```dataview
 LIST
-FROM "notes"
+FROM "wiki"
 WHERE source = this.file.link
 SORT understanding_level DESC
 ```

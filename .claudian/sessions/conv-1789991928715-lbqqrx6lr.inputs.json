@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789991928715-lbqqrx6lr",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789991928770-j72divv",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789991928710-9y7896m",
+      "timestamp": 1789991928710,
+      "rawDisplayText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\nsource_type：tutorial\n\ndiff 包目录：\ndiff/20260922_Python教程_尚硅谷_ingest/\n\n要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。",
+      "canonicalText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\nsource_type：tutorial\n\ndiff 包目录：\ndiff/20260922_Python教程_尚硅谷_ingest/\n\n要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。",
+      "images": [],
+      "contentDigest": "59e4a383779ae8a462639d2b784ec2fa9afadb9dfb585954415d26bee91772e8",
+      "providerUserMessageId": "6161470a-a7cc-4aad-abbc-5f7b92af0253"
+    }
+  ]
+}

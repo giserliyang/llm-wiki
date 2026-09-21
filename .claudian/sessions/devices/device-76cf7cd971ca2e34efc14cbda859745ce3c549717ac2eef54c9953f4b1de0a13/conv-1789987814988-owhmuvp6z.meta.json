@@ -1,0 +1,25 @@
+{
+  "id": "conv-1789987814988-owhmuvp6z",
+  "providerId": "claude",
+  "title": "Ingest Python Tutorial from Shanggei",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789987814990,
+  "lastActivityAt": 1789988104617,
+  "sessionId": "54af6623-ebfd-4be4-9f5a-73600495e345",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "54af6623-ebfd-4be4-9f5a-73600495e345"
+  },
+  "isPinned": false,
+  "isArchived": true,
+  "usage": {
+    "model": "opus",
+    "inputTokens": 13127,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 114176,
+    "contextWindow": 200000,
+    "contextTokens": 127303,
+    "percentage": 64,
+    "contextWindowIsAuthoritative": true
+  }
+}

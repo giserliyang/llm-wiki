@@ -1,83 +1,105 @@
 # Claudian 命令速查
 
-打开方式：`Ctrl/Cmd + P` → **Claudian: Open chat view**（或侧边栏图标）。  
-工作目录 = 本 Vault 根，会遵守 [[AGENTS]]。
+**Vault 根：** `C:\Users\HP\Documents\llm_wiki\llm-wiki`  
+规则：`AGENTS.md` + `prompt/ingest.md`（**diff 用包目录，一页一个 md**）。
 
-## 前置
+---
 
-1. 本机已安装并登录 **Claude Code** CLI（或在 Claudian 设置里选好 Agent/模型）
-2. 素材已在 `raw/`，例如 `raw/tutorials/xxx.md`
+## 1. 摄入
 
-## 常用指令（可直接粘贴）
+```text
+按 AGENTS.md 与 prompt/ingest.md 执行摄入。
 
-### 1. 摄入一篇 raw，生成 wiki
+素材：
+raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md
 
-```
-按根目录 AGENTS.md 和 prompt/ingest.md 处理：
-读取 raw/tutorials/【文件名】.md，
-更新 wiki/（优先改已有页，无相关主题才新建），
-不要改 raw/ 和 notes/，
-把变更写到 diff/【YYYYMMDD_主题】_diff.md，
-最后用不超过 10 行总结你改了哪些页、diff 路径。
-```
+source_type：tutorial
 
-### 2. 只提炼概念页（细粒度）
+diff 包目录：
+diff/20260922_Python教程_尚硅谷_ingest/
 
-```
-读 raw/tutorials/【文件名】.md，按 AGENTS.md，
-为文中 3–8 个核心概念各写/更新一页 wiki/concepts/，
-互相用 [[]] 链接，关键结论标注 raw 来源，
-输出到 diff/，不要直接覆盖 wiki/ 正文。
+要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。
 ```
 
-### 3. 质量校验
+---
 
-```
-按 prompt/lint.md 扫描 wiki/，
-只读检查，不改文件，
-报告写到 report/【YYYYMMDD】_lint.md。
-```
+## 2. 应用 diff 包
 
-### 4. 问答 + 回写
+```text
+我已审阅 diff/<包名>/MANIFEST.md，同意合并。
 
-```
-基于 wiki/ 和相关 raw/ 回答：【你的问题】。
-若结论可复用，按 AGENTS.md 生成 diff 到 diff/，
-说明建议回写到哪一页。
-```
-
-### 5. 建议（不要代写）个人原子笔记
-
-```
-读 raw/tutorials/【文件名】.md 和 AGENTS.md，
-不要修改 notes/。
-在 diff/suggestions/ 里给出 1–3 篇原子笔记骨架建议
-（含 YAML 字段与 source 双链），由我决定是否采纳。
+按 AGENTS.md：
+1. 读 MANIFEST「变更清单」。
+2. 将包内 pages/** 按相对路径复制到 Vault 对应路径（CREATE 新建，UPDATE 覆盖）。
+3. 不要把 MANIFEST.md 写入 wiki/。
+4. 不要改 raw/；不要改我已填写的 understanding_level、need_practice、status、last_review（新建页默认值除外）。
+5. ≤5 行总结：写入了哪些路径、有无失败项。
 ```
 
-### 6. 同时处理多个来源
+---
 
+## 3. Lint
+
+```text
+按 AGENTS.md 与 prompt/lint.md 执行，只读不改。
+扫描 wiki/；检查 source、YAML、正文链接（缺 # / 双 # / 无路径 / # 后缺序号如 10.）。
+输出：report/YYYYMMDD_lint.md
 ```
-按 AGENTS.md 与 prompt/ingest.md，
-处理 raw/bookmarks/ 下 status 为未读 的文件，
-更新 wiki/，统一输出 diff/2026XXXX_batch_ingest_diff.md。
+
+---
+
+## 4. 修复 lint → diff 包
+
+```text
+读 report/【文件】阻断项与应改进，
+按 AGENTS.md 与 prompt/ingest.md 的 Diff 包格式，
+生成：
+diff/【日期】_lint_fix/
+  MANIFEST.md
+  pages/wiki/**（仅问题页的完整目标文件）
+不改 raw/；不改我的 mastery 字段。
+≤5 行总结。
 ```
 
-## 审核闭环
+---
 
-1. Claudian 写出 `diff/*.md`
-2. 你在 Obsidian 打开 diff，人工看一遍
-3. 确认后把内容合并进 `wiki/` 对应页（或让它「已审核，应用 diff 到 wiki/」）
-4. 打开 [[dashboards/学习仪表盘]] / [[wiki/overview]] 确认索引
+## 5. 应用 lint 修复包
 
-## 它不会自动做的事
+```text
+我已审阅 diff/<lint_fix 包>/MANIFEST.md，同意应用。
+将 pages/** 复制到 MANIFEST 中的 vault 目标路径；
+不要把 MANIFEST 写入 wiki/；
+不要改 raw/ 与我的 mastery 字段；
+≤5 行总结。
+```
 
-- 不会替你改 `notes/` 原子笔记（除非你明确授权）
-- 不会删 raw
-- 不会「一键全自动升级 understanding_level」——那是你的行为结果
+---
 
-## 出问题时
+## 6. 跨素材织网（两套教程互链）
 
-- 提示找不到 CLI / Node：在 Claudian 设置里指定 Claude Code 路径
-- 权限模式：首次可允许写 vault；若只读，改 permissionMode
-- 命令面板搜不到：确认社区插件已启用 Claudian
+```text
+按 AGENTS.md，生成互链 diff 包：
+diff/20260922_跨教程互链/
+
+素材范围：
+- raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md
+- raw/tutorials/Python数据分析教程/20260921_Python数据分析教程_尚硅谷.md
+
+任务：
+1. 扫描 wiki/ 全部页，按语义在「关联」小节互相链接（只用真实存在的页名 [[]]）。
+   例如：列表/字典 ↔ Pandas DataFrame/Series；Python 环境 ↔ Anaconda；注释规范 等。
+2. 若无「关联」小节则追加在页尾。
+3. 不改正文技术结论；不改 raw/；不改 mastery YAML。
+4. 每个被改的页输出完整文件到 pages/wiki/...（MANIFEST 列 CREATE/UPDATE）。
+5. 可选：UPDATE wiki/links.md（保持 Dataview 结构即可）。
+
+输出格式按 prompt/ingest.md 的 Diff 包。
+```
+
+---
+
+## 边界
+
+- 不改 `raw/`、不直接改 `wiki/`（须先有 diff 包）  
+- diff：**目录包**，不是单文件嵌套代码块  
+- 合并：只拷 `pages/**`，不拷 `MANIFEST.md`  

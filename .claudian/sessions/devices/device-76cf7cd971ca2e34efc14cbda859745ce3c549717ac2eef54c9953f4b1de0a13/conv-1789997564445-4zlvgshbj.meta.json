@@ -1,0 +1,23 @@
+{
+  "id": "conv-1789997564445-4zlvgshbj",
+  "providerId": "claude",
+  "title": "Ingest Python tutorial following AGENTS.md and ...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789997564448,
+  "lastActivityAt": 1790000011297,
+  "sessionId": "c71c6ce0-37f1-45da-91a5-6c5383aecf55",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "c71c6ce0-37f1-45da-91a5-6c5383aecf55"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 455,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 213760,
+    "contextWindow": 200000,
+    "contextTokens": 214215,
+    "percentage": 100,
+    "contextWindowIsAuthoritative": true
+  }
+}

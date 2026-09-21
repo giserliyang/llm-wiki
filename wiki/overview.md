@@ -1,40 +1,42 @@
 ---
-title: LLM Wiki 总览
+title: 知识总览
 status: ready
-kind: overview
+kind: index
 tags:
-  - wiki
-last_reviewed: 2026-09-11
+  - index
+last_reviewed: 2026-09-22
 ---
 
-# LLM Wiki 总览
+# 知识总览
 
-这是 **LLM 维护、人类审核** 的结构化知识层入口。个人手写原子笔记见 [[dashboards/学习仪表盘]]。
+`wiki/` = 唯一知识库。下面列表由 Dataview **动态读取全部** 已有页，不靠手写清单。
 
-## 这个 Wiki 是什么
+## 入口
 
-把 `raw/` 中的教程、视频、网页书签，提前编译成可复用、可溯源、可互链的概念页——而不是每次临时检索。
+| 去哪 | 内容 |
+| --- | --- |
+| [[wiki/links]] | 链接索引 |
+| [[wiki/glossary]] | 术语 |
+| [[dashboards/学习仪表盘]] | 掌握度 |
+| [[dashboards/素材收件箱]] | raw 进度 |
 
-## 怎么用
-
-| 你想…     | 去哪                   |            |
-| ------- | -------------------- | ---------- |
-| 看体系地图   | [[wiki/links         | links]]    |
-| 查术语     | [[wiki/glossary      | glossary]] |
-| 学概念     | `wiki/concepts/`     |            |
-| 查工具/人物  | `wiki/entities/`     |            |
-| 看对比     | `wiki/comparisons/`  |            |
-| 看自己的掌握度 | [[dashboards/学习仪表盘]] |            |
-
-## 核心概念
+## 全部概念页
 
 ```dataview
-TABLE status, file.mtime AS "更新"
+LIST
 FROM "wiki/concepts"
-SORT file.mtime DESC
+SORT file.name ASC
 ```
 
-## 核心实体
+## 全部对比页
+
+```dataview
+LIST
+FROM "wiki/comparisons"
+SORT file.name ASC
+```
+
+## 全部实体页
 
 ```dataview
 LIST
@@ -42,18 +44,47 @@ FROM "wiki/entities"
 SORT file.name ASC
 ```
 
-## 最近更新的 Wiki 页
+## 全部实践页
 
 ```dataview
-TABLE status, file.mtime AS "更新"
-FROM "wiki"
-WHERE file.name != "overview" AND file.name != "links" AND file.name != "glossary"
-SORT file.mtime DESC
-LIMIT 20
+LIST
+FROM "wiki/practice"
+SORT file.name ASC
 ```
 
-## 与个人笔记的边界
+## 按素材 source 分组（两套教程是否齐全一眼可见）
 
-- `wiki/`：LLM 写，你审
-- `notes/`：你写，LLM 最多建议
-- `raw/`：只读归档，保证溯源
+```dataview
+TABLE rows.file.link AS "wiki 页", length(rows) AS "数量"
+FROM "wiki"
+WHERE source
+GROUP BY source
+```
+
+## 根下笔记（非分类目录）
+
+```dataview
+TABLE kind, understanding_level AS "level", status
+FROM "wiki"
+WHERE !contains(file.path, "/concepts/") AND !contains(file.path, "/comparisons/")
+  AND !contains(file.path, "/entities/") AND !contains(file.path, "/practice/")
+  AND !contains(file.path, "/decisions/")
+  AND kind != "index"
+  AND file.name != "overview" AND file.name != "links" AND file.name != "glossary" AND file.name != "README"
+SORT file.mtime DESC
+```
+
+## 近期素材（仅登记入口，页名看上方列表）
+
+### 1. Python 基础教程
+
+- raw：[[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]
+- 本库页：`source` 含该 raw 的 notes，见「按素材 source 分组」
+
+### 2. Python 数据分析教程
+
+- raw：[[raw/tutorials/Python数据分析教程/20260921_Python数据分析教程_尚硅谷]]
+- 本库页：同上
+### 跨教程互链（2026-09-22）
+
+> 本期为两版尚硅谷教程（Python基础 + Python数据分析）建立语义互链，覆盖 ndarray/Series/DataFrame/Pandas/NumPy 等核心概念。

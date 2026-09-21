@@ -123,13 +123,13 @@ duration: ""
 
 - [ ] 通读字幕
 - [ ] 对照源码动手
-- [ ] 写入 notes/（若有要点）
+- [ ] 写入 wiki/（若有要点）
 
 ## 拆解索引
 
 ```dataview
 LIST
-FROM "notes"
+FROM "wiki"
 WHERE source = this.file.link
 SORT understanding_level DESC
 ```

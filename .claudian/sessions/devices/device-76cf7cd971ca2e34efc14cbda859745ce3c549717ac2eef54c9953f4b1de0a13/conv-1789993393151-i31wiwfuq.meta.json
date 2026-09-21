@@ -1,0 +1,23 @@
+{
+  "id": "conv-1789993393151-i31wiwfuq",
+  "providerId": "claude",
+  "title": "Ingest Python tutorial from 尚硅谷",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789993393154,
+  "lastActivityAt": 1789995152488,
+  "sessionId": "65dcd30d-392f-4a7c-b077-c57183078a1b",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "65dcd30d-392f-4a7c-b077-c57183078a1b"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 474,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 151296,
+    "contextWindow": 200000,
+    "contextTokens": 151770,
+    "percentage": 76,
+    "contextWindowIsAuthoritative": true
+  }
+}

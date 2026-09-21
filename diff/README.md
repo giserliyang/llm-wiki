@@ -1,10 +1,7 @@
-# Diff 审核目录
+# Diff 目录
 
-LLM 不得直接覆盖 `wiki/`，变更先落在这里。
+LLM 对 `wiki/` 的变更只写这里；**人审 → 合并进 wiki → 删除 diff**。
 
-命名：`YYYYMMDD_页面名_diff.md`
+命名：`YYYYMMDD_主题_diff.md`
 
-人审通过后，把内容合并进对应 `wiki/` 页面，然后把 diff 移到 `diff/accepted/` 或删除。
-
-子目录：
-- `suggestions/` — LLM 对个人 `notes/` 的骨架建议（仅建议）
+历史靠 Git，不在库里堆已处理文件。

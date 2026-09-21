@@ -1,26 +1,25 @@
 # 校验提示词（Lint Prompt）
 
----
+只读检查；**不要修改** `wiki/` 与 `raw/`。
 
-你是本 Vault 的质量校验助手。只读检查，**不要直接修改** `wiki/` / `notes/` / `raw/`。
+对 `wiki/` 检查：
 
-对 `wiki/` 全量或用户指定子集检查：
+1. **source 路径**是否为 `raw/` 下真实文件（禁止 `../raw`、简写、同上）  
+2. **正文来源链接**是否为 `[[raw/完整路径#标题全文]]`；`#` 后是否与原文标题一致（**必须保留序号**如 `10.`、`1.1.`、`第 5 章`）；是否出现无路径 `[[标题]]`；是否缺 `#`；是否有两个 `#`  
+3. Frontmatter：`kind` / `status` / `understanding_level`(0–5) / `need_practice` / `last_review` / `source` / `source_type`  
+4. 链接是否指向不存在的页  
+5. 概念页与对比页是否整表重复  
+6. `wiki/overview.md`、`wiki/links.md` 是否过期  
+7. 同主题是否多页矛盾  
 
-1. 关键结论是否有 `raw/` 来源；无来源是否标了疑问。
-2. 链接是否有效、是否强扭。
-3. Frontmatter 是否符合 `templates/wiki-page.md`：`status`、`kind`、标签等。
-4. 同一概念是否多页互相矛盾。
-5. 是否存在过碎页或重复页，给出合并建议。
-6. `wiki/overview.md`、`wiki/links.md` 是否明显过期。
-7. （可选）抽查 `notes/`：`source` 是否指向存在的 raw；`understanding_level` 是否在 0–5。
-
-输出到 `report/YYYYMMDD_lint.md`，结构：
+报告：`report/YYYYMMDD_lint.md`
 
 ```markdown
 # Lint 报告 YYYY-MM-DD
 
 ## 阻断问题
-- [ ] 页面：... 问题：... 建议：...
+- [ ] 页：... 问题：... 建议：...
+  （链接类写清：缺路径 / 缺 # / 双 # / # 后标题缺序号）
 
 ## 应改进
 - ...
@@ -31,4 +30,4 @@
 ## 通过项摘要
 ```
 
-人审报告后，再决定是否让 LLM 按报告生成 diff。
+人审后再决定是否生成修复 diff。

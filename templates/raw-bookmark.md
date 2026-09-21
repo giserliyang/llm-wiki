@@ -1,15 +1,15 @@
 ---
-title: "{{title}}"
+title: "<% tp.file.title %>"
 type: raw
 source_type: bookmark
 tags: []
 status: 未读
-created: "{{date}}"
+created: <% tp.date.now("YYYY-MM-DD") %>
 source_url: ""
 author: ""
 ---
 
-（剪藏正文放这里。保留文章原有标题层级，**不要**再包一层 `# 总标题`。）
+（剪藏正文。保留原文标题层级，**不要**再包一层 `#` 总标题。）
 
 ---
 
@@ -19,15 +19,13 @@ author: ""
 
 | 字段 | 值 |
 | --- | --- |
-| URL | {{source_url}} |
+| URL | <% tp.frontmatter.source_url ? tp.frontmatter.source_url : tp.frontmatter.url %> |
 | 为什么存 | |
 | 什么时候用 | |
 
 ## 阅读进度
 
-> 用 Templater `gen-reading-progress` 生成（~~脚本~~碰到「学习附录」会停）。
-> 纯参考书签可删掉本段。未勾选会出现在 [[dashboards/素材收件箱]]。
-> 标记：✅ 已掌握 / 🔴 急需 / 🟡 了解即可 / ⚪ 暂跳过
+> 系统要学才保留本段。未勾选 → [[dashboards/素材收件箱]]。
 
 - [ ] 
   - [ ] 
@@ -36,7 +34,7 @@ author: ""
 
 ```dataview
 LIST
-FROM "notes"
+FROM "wiki"
 WHERE source = this.file.link
 SORT understanding_level DESC
 ```

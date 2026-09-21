@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789993393151-i31wiwfuq",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789993393197-njvuql8",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789993393147-pvar3q8",
+      "timestamp": 1789993393147,
+      "rawDisplayText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\nsource_type：tutorial\n\ndiff 包目录：\ndiff/20260922_Python教程_尚硅谷_ingest/\n\n要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。",
+      "canonicalText": "按 AGENTS.md 与 prompt/ingest.md 执行摄入。\n\n素材：\nraw/tutorials/Python教程/20260921_Python教程_尚硅谷.md\n\nsource_type：tutorial\n\ndiff 包目录：\ndiff/20260922_Python教程_尚硅谷_ingest/\n\n要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。",
+      "images": [],
+      "contentDigest": "59e4a383779ae8a462639d2b784ec2fa9afadb9dfb585954415d26bee91772e8",
+      "providerUserMessageId": "5051187f-3348-4bf3-8bca-a12d713d4b65",
+      "providerAssistantMessageId": "940a7b30-fc3b-446a-b2dc-30956dc54e5b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789994529210-0alhm9t",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1789994529201-6jmjvf5",
+      "timestamp": 1789994529201,
+      "rawDisplayText": "我已审阅 diff/20260922_Python教程_尚硅谷_ingest/MANIFEST.md，同意合并。\n\n按 AGENTS.md：\n1. 读 MANIFEST「变更清单」。\n2. 将包内 pages/** 按相对路径复制到 Vault 对应路径（CREATE 新建，UPDATE 覆盖）。\n3. 不要把 MANIFEST.md 写入 wiki/。\n4. 不要改 raw/；不要改我已填写的 understanding_level、need_practice、status、last_review（新建页默认值除外）。\n5. ≤5 行总结：写入了哪些路径、有无失败项。",
+      "canonicalText": "我已审阅 diff/20260922_Python教程_尚硅谷_ingest/MANIFEST.md，同意合并。\n\n按 AGENTS.md：\n1. 读 MANIFEST「变更清单」。\n2. 将包内 pages/** 按相对路径复制到 Vault 对应路径（CREATE 新建，UPDATE 覆盖）。\n3. 不要把 MANIFEST.md 写入 wiki/。\n4. 不要改 raw/；不要改我已填写的 understanding_level、need_practice、status、last_review（新建页默认值除外）。\n5. ≤5 行总结：写入了哪些路径、有无失败项。",
+      "images": [],
+      "contentDigest": "5e7a824714aa43477b8068664d543e482031e22e02f4e48b048ccfae15e3e48f",
+      "providerUserMessageId": "72e3409b-43e1-4298-8070-98d117a004d7",
+      "providerAssistantMessageId": "b5b54691-b692-470f-bbb7-f95603e7c4ff"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789994695454-6zzzm2l",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1789994695448-el4aq6b",
+      "timestamp": 1789994695448,
+      "rawDisplayText": "按 AGENTS.md 与 prompt/lint.md 执行，只读不改。\n扫描 wiki/；检查 source、YAML、正文链接（缺 # / 双 # / 无路径 / # 后缺序号如 10.）。\n输出：report/YYYYMMDD_lint.md",
+      "canonicalText": "按 AGENTS.md 与 prompt/lint.md 执行，只读不改。\n扫描 wiki/；检查 source、YAML、正文链接（缺 # / 双 # / 无路径 / # 后缺序号如 10.）。\n输出：report/YYYYMMDD_lint.md",
+      "images": [],
+      "contentDigest": "554cd46b83115bcef8880d73ab267c8e50a721ddd3b9f882435413e53bcd85c1",
+      "providerUserMessageId": "04997981-2b3a-4ad0-9c3b-888dbd786748",
+      "providerAssistantMessageId": "808f8736-4ad4-4a2b-875e-e59be3d0b048"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789995010082-codyvqr",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1789995010038-34q3lwy",
+      "timestamp": 1789995010038,
+      "rawDisplayText": "读 report/20260922_lint.md 阻断项与应改进，\n按 AGENTS.md 与 prompt/ingest.md 的 Diff 包格式，\n生成：\ndiff/【日期】_lint_fix/\n  MANIFEST.md\n  pages/wiki/**（仅问题页的完整目标文件）\n不改 raw/；不改我的 mastery 字段。\n≤5 行总结。",
+      "canonicalText": "读 report/20260922_lint.md 阻断项与应改进，\n按 AGENTS.md 与 prompt/ingest.md 的 Diff 包格式，\n生成：\ndiff/【日期】_lint_fix/\n  MANIFEST.md\n  pages/wiki/**（仅问题页的完整目标文件）\n不改 raw/；不改我的 mastery 字段。\n≤5 行总结。",
+      "images": [],
+      "contentDigest": "1a199283c517354abb59b7dcb72ac3e74c21d4f7b55112501c6638d79ad8f05f",
+      "providerUserMessageId": "d43b81d6-2c35-4bc1-9e20-9b7ddd4a5bc5",
+      "providerAssistantMessageId": "5b303447-00bc-4904-9df4-fa7b6a47586d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789995116066-fnycyu3",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1789995116055-d1og8j9",
+      "timestamp": 1789995116055,
+      "rawDisplayText": "读 report/20260922_lint_fix 阻断项与应改进，\n按 AGENTS.md 与 prompt/ingest.md 的 Diff 包格式，\n生成：\ndiff/【日期】_lint_fix/\n  MANIFEST.md\n  pages/wiki/**（仅问题页的完整目标文件）\n不改 raw/；不改我的 mastery 字段。\n≤5 行总结。",
+      "canonicalText": "读 report/20260922_lint_fix 阻断项与应改进，\n按 AGENTS.md 与 prompt/ingest.md 的 Diff 包格式，\n生成：\ndiff/【日期】_lint_fix/\n  MANIFEST.md\n  pages/wiki/**（仅问题页的完整目标文件）\n不改 raw/；不改我的 mastery 字段。\n≤5 行总结。",
+      "images": [],
+      "contentDigest": "9e6a8b220233c94050afd3b701a8bcb025b895541af17ef037340fcfe5062c63",
+      "providerUserMessageId": "42aab29e-9dc7-4268-8f12-5c4f17127e21",
+      "providerAssistantMessageId": "a8749789-f2c2-496c-9f92-a1b317955190"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789995141346-3z8lzsq",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1789995141335-kvsr0pj",
+      "timestamp": 1789995141335,
+      "rawDisplayText": "我已审阅 diff/20260922_lint_fix/MANIFEST.md，同意应用。\n将 pages/** 复制到 MANIFEST 中的 vault 目标路径；\n不要把 MANIFEST 写入 wiki/；\n不要改 raw/ 与我的 mastery 字段；\n≤5 行总结。",
+      "canonicalText": "我已审阅 diff/20260922_lint_fix/MANIFEST.md，同意应用。\n将 pages/** 复制到 MANIFEST 中的 vault 目标路径；\n不要把 MANIFEST 写入 wiki/；\n不要改 raw/ 与我的 mastery 字段；\n≤5 行总结。",
+      "images": [],
+      "contentDigest": "c2532680e1dc956c5da4c13c7b3dc5df3207318d7ce1a3ee8b3c60ed8288df93",
+      "providerUserMessageId": "354a0460-a3a9-4568-8121-0d60233a5efb",
+      "providerAssistantMessageId": "d5bd5405-d007-4bd9-a982-4062941d5500"
+    }
+  ]
+}
