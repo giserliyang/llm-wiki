@@ -11,15 +11,10 @@
             "id": "12043a1dfff981de",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "新标签页"
             }
           }
         ]
@@ -148,12 +143,12 @@
                   "version": 1,
                   "openTabs": [
                     {
-                      "tabId": "tab-1789908551147-tgrx46h",
+                      "tabId": "tab-1790042809714-16dqny5",
                       "conversationId": null,
                       "draftModel": "opus"
                     }
                   ],
-                  "activeTabId": "tab-1789908551147-tgrx46h"
+                  "activeTabId": "tab-1790042809714-16dqny5"
                 }
               },
               "icon": "bot",
@@ -221,44 +216,44 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "614475cb05a3256f",
+  "active": "4dcb414c8c398255",
   "lastOpenFiles": [
-    "wiki/practice/代码格式化技巧.md",
-    "wiki/practice/Python 环境搭建.md",
-    "wiki/practice/Python 下载 Mapbox 卫星瓦片影像.md",
-    "wiki/practice/Pandas 数据清洗流程.md",
-    "wiki/entities/Python 运行方式.md",
-    "wiki/entities/Python 关键字.md",
-    "wiki/entities/PyCharm 配置.md",
-    "wiki/entities/Jupyter Notebook.md",
-    "wiki/entities/Anaconda.md",
-    "wiki/concepts/面向对象基础.md",
-    "wiki/concepts/集合.md",
-    "wiki/concepts/闭包.md",
-    "wiki/concepts/错误与异常.md",
-    "wiki/concepts/迭代器.md",
-    "wiki/concepts/进制.md",
-    "wiki/concepts/运算符.md",
-    "wiki/concepts/输入语句.md",
-    "wiki/concepts/软件分类.md",
-    "wiki/concepts/计算机语言简史.md",
-    "wiki/concepts/计算机组成.md",
-    "wiki/concepts/装饰器.md",
-    "wiki/concepts/继承.md",
-    "wiki/concepts/生成器.md",
-    "wiki/concepts/注释.md",
-    "wiki/concepts/模块与包.md",
-    "wiki/concepts/权限控制.md",
     "wiki/practice",
+    "wiki/overview.md",
+    "wiki/links.md",
+    "wiki/glossary.md",
     "wiki/entities",
     "wiki/decisions",
     "wiki/concepts",
     "wiki/comparisons",
+    "wiki/README.md",
     "wiki",
+    "templates/raw-video.md",
+    "templates/raw-tutorial.md",
+    "templates/raw-bookmark.md",
+    "templates/prepend-video-yaml.md",
+    "templates/prepend-tutorial-yaml.md",
+    "templates/prepend-bookmark-yaml.md",
+    "templates/node-quick-capture.md",
+    "templates/node-essay.md",
+    "templates/node-concept.md",
+    "templates/node-atomic-note.md",
+    "templates/gen-reading-progress.md",
+    "templates/append-video-appendix.md",
+    "templates/append-tutorial-appendix.md",
+    "templates/append-bookmark-appendix.md",
     "templates",
     "scripts/video_to_note.py",
-    "scripts/parse_chapters.py",
-    "scripts/generate_pages.py",
+    "scripts",
+    "report",
+    "raw/videos",
+    "raw/README.md",
+    "prompt/writeback.md",
+    "prompt/templater-reading-progress.md",
+    "prompt/lint.md",
+    "prompt/ingest.md",
+    "prompt/claudian-cheatsheet.md",
+    "diff/README.md",
     "raw/tutorials/python/images/document_image_rId99.png",
     "raw/tutorials/python/images/document_image_rId98.png",
     "raw/tutorials/python/images/document_image_rId97.png",

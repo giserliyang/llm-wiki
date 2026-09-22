@@ -1,7 +1,7 @@
 # Claudian 命令速查
 
-**Vault 根：** `C:\Users\HP\Documents\llm_wiki\llm-wiki`  
-规则：`AGENTS.md` + `prompt/ingest.md`（**diff 用包目录，一页一个 md**）。
+**Vault 根：** `C:\Users\HP\Documents\llm_wiki\llm-wiki - 副本`  
+规则：`AGENTS.md` + `prompt/ingest.md`（diff 用包目录；含代码页须有 `## 代码与坑`）。
 
 ---
 
@@ -18,7 +18,7 @@ source_type：tutorial
 diff 包目录：
 diff/20260922_Python教程_尚硅谷_ingest/
 
-要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页。
+要求：按 ingest.md 生成 MANIFEST.md + pages/wiki/**；一页一个 md；不要用外层 ```markdown 包住整页；含代码的页必须有 ## 代码与坑。
 ```
 
 ---
@@ -30,9 +30,9 @@ diff/20260922_Python教程_尚硅谷_ingest/
 
 按 AGENTS.md：
 1. 读 MANIFEST「变更清单」。
-2. 将包内 pages/** 按相对路径复制到 Vault 对应路径（CREATE 新建，UPDATE 覆盖）。
+2. 将包内 pages/** 按相对路径复制到 Vault 对应路径。
 3. 不要把 MANIFEST.md 写入 wiki/。
-4. 不要改 raw/；不要改我已填写的 understanding_level、need_practice、status、last_review（新建页默认值除外）。
+4. 不要改 raw/；不要改我已填的 understanding_level、need_practice、status、last_review（新建页默认值除外）。
 5. ≤5 行总结：写入了哪些路径、有无失败项。
 ```
 
@@ -42,7 +42,7 @@ diff/20260922_Python教程_尚硅谷_ingest/
 
 ```text
 按 AGENTS.md 与 prompt/lint.md 执行，只读不改。
-扫描 wiki/；检查 source、YAML、正文链接（缺 # / 双 # / 无路径 / # 后缺序号如 10.）。
+扫描 wiki/；检查 source、YAML、正文链接（缺 # / 双 # / 无路径 / # 后缺序号）、代码是否缺「为解决【…】」。
 输出：report/YYYYMMDD_lint.md
 ```
 
@@ -75,31 +75,9 @@ diff/【日期】_lint_fix/
 
 ---
 
-## 6. 跨素材织网（两套教程互链）
-
-```text
-按 AGENTS.md，生成互链 diff 包：
-diff/20260922_跨教程互链/
-
-素材范围：
-- raw/tutorials/Python教程/20260921_Python教程_尚硅谷.md
-- raw/tutorials/Python数据分析教程/20260921_Python数据分析教程_尚硅谷.md
-
-任务：
-1. 扫描 wiki/ 全部页，按语义在「关联」小节互相链接（只用真实存在的页名 [[]]）。
-   例如：列表/字典 ↔ Pandas DataFrame/Series；Python 环境 ↔ Anaconda；注释规范 等。
-2. 若无「关联」小节则追加在页尾。
-3. 不改正文技术结论；不改 raw/；不改 mastery YAML。
-4. 每个被改的页输出完整文件到 pages/wiki/...（MANIFEST 列 CREATE/UPDATE）。
-5. 可选：UPDATE wiki/links.md（保持 Dataview 结构即可）。
-
-输出格式按 prompt/ingest.md 的 Diff 包。
-```
-
----
-
 ## 边界
 
 - 不改 `raw/`、不直接改 `wiki/`（须先有 diff 包）  
 - diff：**目录包**，不是单文件嵌套代码块  
 - 合并：只拷 `pages/**`，不拷 `MANIFEST.md`  
+- 含代码页：`## 代码与坑` + 「为解决【…】」注释 + Callout  
