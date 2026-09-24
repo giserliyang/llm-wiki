@@ -4,7 +4,7 @@ status: ready
 kind: index
 tags:
   - index
-last_reviewed: 2026-09-22
+last_reviewed: 2026-09-23
 ---
 
 # 知识总览
@@ -13,11 +13,11 @@ last_reviewed: 2026-09-22
 
 ## 入口
 
-| 去哪 | 内容 |
-| --- | --- |
-| [[wiki/links]] | 链接索引 |
-| [[wiki/glossary]] | 术语 |
-| [[dashboards/学习仪表盘]] | 掌握度 |
+| 去哪                   | 内容     |
+| -------------------- | ------ |
+| [[wiki/links]]       | 链接索引   |
+| [[wiki/glossary]]    | 术语     |
+| [[dashboards/学习仪表盘]] | 掌握度    |
 | [[dashboards/素材收件箱]] | raw 进度 |
 
 ## 全部概念页
@@ -74,17 +74,3 @@ WHERE !contains(file.path, "/concepts/") AND !contains(file.path, "/comparisons/
 SORT file.mtime DESC
 ```
 
-## 近期素材（仅登记入口，页名看上方列表）
-
-### 1. Python 基础教程
-
-- raw：[[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]
-- 本库页：`source` 含该 raw 的 notes，见「按素材 source 分组」
-
-### 2. Python 数据分析教程
-
-- raw：[[raw/tutorials/Python数据分析教程/20260921_Python数据分析教程_尚硅谷]]
-- 本库页：同上
-### 跨教程互链（2026-09-22）
-
-> 本期为两版尚硅谷教程（Python基础 + Python数据分析）建立语义互链，覆盖 ndarray/Series/DataFrame/Pandas/NumPy 等核心概念。

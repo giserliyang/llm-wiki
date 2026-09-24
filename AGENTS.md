@@ -37,22 +37,21 @@ source: "[[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]"
 
 ```markdown
 ✅ [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷#第 5 章 函数]]
-✅ [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷#1.1. 硬件]]
+✅ [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷#10. 浅拷贝 vs 深拷贝]]
 ❌ [[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]          ← 正文写结论时缺 #标题
 ❌ [[第 5 章 函数]] / [[../raw/...]] / [[同上]]
 ❌ [[raw/...尚硅谷#第 5 章 函数#1.1. 硬件]]                          ← 禁止两个 #，Obsidian 无法跳转
 ```
 
 - **只允许一个 `#`**；`#` 后必须是原文某行标题**全文**（含 `10.`、`1.1.`、`第 5 章` 等序号，**不得删序号**）
-- 示例：`#10. 浅拷贝 vs 深拷贝` 正确；`#浅拷贝 vs 深拷贝` 错误（缺 `10.`）
 - 每一处结论单独写完整链接；禁止简写、禁止双锚点
 
 ### 3. Lint 必查
 
-- YAML `source` 路径是否存在（不应含错误相对路径）
-- 正文是否出现无路径 `[[标题]]`
-- 正文章/节引用是否缺 `#` 或出现 **两个及以上 `#`**
+- YAML `source` 路径是否存在
+- 正文是否出现无路径 `[[标题]]`；章/节引用是否缺 `#` 或出现 **两个及以上 `#`**；`#` 后是否缺序号
 - 含代码页是否缺 `## 代码与坑` 或「为解决【…】」说明
+- **教程含案例时**：wiki 是否沉淀了案例（见下）
 
 ## YAML（可学习 wiki 页必填）
 
@@ -69,6 +68,16 @@ source: "[[raw/tutorials/Python教程/20260921_Python教程_尚硅谷]]"
 
 用户已填的 mastery 字段，LLM 勿擅自改。
 
+## 教程案例（重要，必须沉淀）
+
+教程/视频里的**案例、实战、完整例子、端到端小项目**不是附属品，**必须进入 wiki**：
+
+1. **完整可复现案例** → `wiki/practice/`（`kind: practice`）：场景 → 步骤/代码 → 结果  
+2. **解释某个概念的短例** → 写在概念/对比页的 **`## 案例`** 小节（模板已含）  
+3. 案例必须带 **raw 章节级来源**（`[[raw/完整路径#原文标题]]`）  
+4. 代码放在 `## 代码与坑`，或案例内联代码块；仍须「为解决【…】」注释  
+5. **禁止**只写抽象结论而丢掉教程里的案例；若原文有「示例/案例/实战/小项目」而 wiki 无对应沉淀，视为摄入不完整  
+
 ## 正文中的代码（阶段 2）
 
 wiki 页若含代码示例（LLM 产出或人工合并时）：
@@ -84,35 +93,38 @@ wiki 页若含代码示例（LLM 产出或人工合并时）：
 | --- | ---: | --- |
 | 单概念 | `wiki/concepts/` | `concept` |
 | 两者对比 | `wiki/comparisons/` | `comparison` |
-| 总览提到专页 | 一句话 + `[[专页]]`，**不复制整表** |
+| **案例 / 实战 / 小项目** | **`wiki/practice/`** | **`practice`** |
+| 工具/人物/产品 | `wiki/entities/` | `entity` |
+| 总览提到专页 | 一句话 + `[[专页]]`，**不复制整表** | |
 
 ## 摄入 Ingest
 
-1. 读 `raw/`，自行提炼主题  
+1. 读 `raw/`，自行提炼主题与**案例**  
 2. 变更写入 **diff 包目录**（禁止用单文件 + 外层 ```markdown 包裹多页）：
 
 ```text
 diff/<YYYYMMDD_主题>_ingest/
-  MANIFEST.md          # Meta + 变更清单（目标路径 ↔ 包内路径）+ 自检 + 总结
+  MANIFEST.md          # Meta + 变更清单 + 自检 + 总结
   pages/
     wiki/concepts/....md
+    wiki/practice/....md   # 案例页
     wiki/comparisons/....md
-    ...
-    wiki/overview.md   # 仅需要时
+    wiki/overview.md
     wiki/links.md
 ```
 
-3. `pages/` 下每个 md = **将来 wiki 的整页**（含 YAML 与内部代码块），路径与 vault 目标一致  
-3. 优先更新已有页；新建时在「关联」中链到**已有**相关 wiki 页（含其它 source 的页）  
-4. 禁止改 `raw/`；禁止未经 diff 包改 `wiki/` 正文  
-5. `wiki/overview.md`、`wiki/links.md` 用 **Dataview 动态列表**（TABLE/LIST + GROUP BY source），不要手写「关键主题」点名清单，避免与文件夹不一致  
-6. 合并：将 `pages/**` 复制到 vault 对应路径；`MANIFEST.md` 不进入 `wiki/`  
+3. `pages/` 下每个 md = **将来 wiki 的整页**（含 YAML 与内部代码块）  
+4. 优先更新已有页；新建时在「关联」中链到**已有**相关 wiki 页  
+5. **案例必须落到 practice 页或 concept 的「## 案例」**  
+6. 禁止改 `raw/`；禁止未经 diff 包改 `wiki/` 正文  
+7. `wiki/overview.md`、`wiki/links.md` 用 **Dataview 动态列表**  
+8. 合并：`pages/**` 复制到 vault；`MANIFEST.md` 不进入 `wiki/`  
 
-人审合并后删除 diff 包。跨两套 raw 的互链可另开 diff 包做 `UPDATE`。
+人审合并后删除 diff 包。
 
 ## Lint
 
-扫描 `wiki/`：来源路径是否存在、**正文链接是否含路径与 `#章节`**、YAML、重复页、索引是否过期 → `report/`。
+扫描 `wiki/`：来源路径、正文链接（含 `#` 与序号）、YAML、代码规范、**案例是否遗漏**、重复页、索引是否过期 → `report/`。
 
 ## 语气
 

@@ -18,6 +18,7 @@
 3. 修改用户已填的 `understanding_level` / `need_practice` / `status` / `last_review`（新建页默认值除外）  
 4. 写入 `inbox/` 或本 Vault 以外目录  
 5. 含代码的页省略 `## 代码与坑`，或只贴原文代码不写「为解决【…】」  
+6. **丢掉原文案例**（必须沉淀到 practice 或 concept 的「## 案例」）  
 
 ## 主题判断与归类（自行分析）
 
@@ -25,13 +26,23 @@
 | --- | ---: | ---: |
 | 单一概念 | `concepts/` | `concept` |
 | 两者对比 | `comparisons/` | `comparison` |
+| **完整案例 / 实战 / 小项目** | **`practice/`** | **`practice`** |
 | 工具/人物/产品 | `entities/` | `entity` |
-| 步骤/清单 | `practice/` | `practice` |
+| 短例（解释概念） | 写入对应 concept/comparison 的 **`## 案例`** | — |
 
 - 优先更新已有页；禁止同主题重复建页  
 - 总览页只摘要 + `[[专页]]`，禁止整表复制  
 - 语义相关已有页（含其它教程）：在双方「关联」加 `[[页名]]`  
 - **含代码的页必须写 `## 代码与坑`**  
+- **有案例必须写 `## 案例` 或 `wiki/practice/` 专页**  
+
+## 案例提取规则（强制）
+
+1. 扫描原文中的「示例 / 案例 / 实战 / 小项目 / Demo / 端到端 / 实现 xxx」等  
+2. **可独立复现的完整案例** → `wiki/practice/<案例名>.md`（`kind: practice`）：场景 → 步骤/代码 → 结果  
+3. **为解释某一概念的短例** → 写入该概念/对比页的 **`## 案例`**，写清「场景 / 做法 / 结果」  
+4. 案例与概念页互链：practice 页「关联」链 concept；concept 的「## 案例」链 practice 页  
+5. **禁止**只写抽象要点而省略原文案例  
 
 ## 可学习页 YAML（必填）
 
@@ -57,7 +68,7 @@ tags: [主题...]
 ✅ [[raw/完整路径#10. 浅拷贝 vs 深拷贝]]
 ✅ [[raw/完整路径#1.1. 硬件]]
 ✅ [[raw/完整路径#第 5 章 函数]]
-❌ [[raw/完整路径#浅拷贝 vs 深拷贝]]   ← 缺原文序号「10. 」
+❌ [[raw/完整路径#浅拷贝 vs 深拷贝]]   ← 缺了原文序号「10. 」
 ❌ [[浅拷贝 vs 深拷贝]]                ← 无 raw 路径
 ❌ [[raw/完整路径]]                    ← 正文结论缺 #标题
 ❌ [[raw/完整路径#第 1 章#1.1. 硬件]]   ← 禁止两个 #
@@ -70,7 +81,7 @@ tags: [主题...]
 3. **必须保留** `10.`、`1.1.`、`第 5 章` 等序号  
 4. **禁止**删序号、改标点/空格、只写小节名  
 
-每处结论单独写完整 `[[raw/路径#完整标题]]`。
+每处结论/案例单独写完整 `[[raw/路径#完整标题]]`。
 
 ---
 
@@ -83,68 +94,22 @@ diff/<包名>/
   MANIFEST.md
   pages/
     wiki/concepts/xxx.md
+    wiki/practice/案例名.md     ← 有案例时
     wiki/comparisons/yyy.md
-    wiki/overview.md    ← 仅需要时
+    wiki/overview.md            ← 仅需要时
     wiki/links.md
 ```
 
-### MANIFEST.md 模板
+### MANIFEST.md 自检清单（摘录）
 
-```markdown
-# Ingest Diff 包
-
-## Meta
-
-- raw：`raw/...`
-- source_type：tutorial
-- 包路径：`diff/<包名>/`
-- 合并方式：`pages/` 按相对路径复制到 Vault 同名路径
-
-## 变更清单
-
-| # | 操作 | 目标路径（Vault 内） | 包内文件 |
-| --- | --- | --- | --- |
-| 1 | CREATE | wiki/concepts/xxx.md | pages/wiki/concepts/xxx.md |
-| 2 | CREATE | wiki/comparisons/yyy.md | pages/wiki/comparisons/yyy.md |
-
-## 自检清单
-
-- [ ] pages/ 路径与 vault 目标一致
-- [ ] 每页 YAML 含 understanding_level 等
-- [ ] source 无 # 且路径正确
-- [ ] 正文来源为 [[raw/路径#原文标题全文]]（含 10. / 1.1. / 第 5 章 等序号）
-- [ ] 含代码时：有 `## 代码与坑`、首行「为解决【…】」、必要 Callout
-- [ ] 未改 raw/、未改用户 mastery 旧值
-- [ ] 无把多页写进同一 md
-
-## 总结（≤10 行）
-
-- 主题与页数
-- 包路径
-- 下一步
-```
+- [ ] **原文案例已沉淀**（practice 页或 concept 的「## 案例」，并带 raw 来源链接）
+- [ ] 含代码时：有 `## 代码与坑`、代码首行「为解决【…】」注释、必要 Callout
+- [ ] 正文来源为 [[raw/路径#原文标题全文]]（含序号）
 
 ### pages/ 下的 md
 
 - 每个文件 = **将来 wiki 的那一整页**（YAML 到文末）  
-- 可包含 ` ```python ` 等内部代码块，**不要再包外层 markdown 围栏**  
-- 文件名与 vault 目标名一致  
-- **含代码时必须包含 `## 代码与坑`**  
-
----
-
-## 应用（人审后发给 Claudian）
-
-```text
-我已审阅 diff/<包名>/MANIFEST.md，同意合并。
-
-按 AGENTS.md：
-1. 读 MANIFEST「变更清单」。
-2. 将包内 pages/** 按相对路径复制到 Vault 对应路径（CREATE 新建，UPDATE 覆盖）。
-3. 不要把 MANIFEST.md 写入 wiki/。
-4. 不要改 raw/；不要改我已填的 understanding_level、need_practice、status、last_review（新建页默认值除外）。
-5. ≤5 行总结：写入路径列表、有无失败项。
-```
+- **含代码必须 `## 代码与坑`；有案例必须 `## 案例` 或独立 practice 页**  
 
 ---
 
