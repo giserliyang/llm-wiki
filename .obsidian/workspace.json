@@ -8,13 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "12043a1dfff981de",
+            "id": "8180eb13bbc6f529",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "dashboards/素材收件箱.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "素材收件箱"
             }
           }
         ]
@@ -51,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"prompt/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -124,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "dashboards/素材收件箱.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -144,11 +149,15 @@
                   "openTabs": [
                     {
                       "tabId": "tab-1790042809714-16dqny5",
+                      "conversationId": "conv-1791798200342-d7257001w"
+                    },
+                    {
+                      "tabId": "tab-1792067095015-r64509r",
                       "conversationId": null,
-                      "draftModel": "opus"
+                      "draftModel": "sonnet"
                     }
                   ],
-                  "activeTabId": "tab-1790042809714-16dqny5"
+                  "activeTabId": "tab-1792067095015-r64509r"
                 }
               },
               "icon": "bot",
@@ -199,7 +208,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -216,53 +225,53 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4dcb414c8c398255",
+  "active": "614475cb05a3256f",
   "lastOpenFiles": [
-    "wiki/practice",
-    "wiki/overview.md",
-    "wiki/links.md",
-    "wiki/glossary.md",
-    "wiki/entities",
-    "wiki/decisions",
-    "wiki/concepts",
-    "wiki/comparisons",
-    "wiki/README.md",
-    "wiki",
-    "templates/raw-video.md",
-    "templates/raw-tutorial.md",
-    "templates/raw-bookmark.md",
-    "templates/prepend-video-yaml.md",
-    "templates/prepend-tutorial-yaml.md",
-    "templates/prepend-bookmark-yaml.md",
-    "templates/node-quick-capture.md",
-    "templates/node-essay.md",
-    "templates/node-concept.md",
-    "templates/node-atomic-note.md",
-    "templates/gen-reading-progress.md",
-    "templates/append-video-appendix.md",
-    "templates/append-tutorial-appendix.md",
-    "templates/append-bookmark-appendix.md",
-    "templates",
-    "scripts/video_to_note.py",
-    "scripts",
-    "report",
-    "raw/videos",
-    "raw/README.md",
-    "prompt/writeback.md",
-    "prompt/templater-reading-progress.md",
-    "prompt/lint.md",
-    "prompt/ingest.md",
+    "raw/tutorials/python教程/20261015_Python（V3.0)教程_尚硅谷.md",
+    "dashboards/素材收件箱.md",
+    "dashboards/学习仪表盘.md",
     "prompt/claudian-cheatsheet.md",
-    "diff/README.md",
-    "raw/tutorials/python/images/document_image_rId99.png",
-    "raw/tutorials/python/images/document_image_rId98.png",
-    "raw/tutorials/python/images/document_image_rId97.png",
-    "raw/tutorials/python/images/document_image_rId96.png",
-    "raw/tutorials/python/images/document_image_rId95.png",
-    "raw/tutorials/python/images/document_image_rId94.png",
-    "raw/tutorials/python/images/document_image_rId93.png",
-    "raw/tutorials/python/images/document_image_rId92.png",
-    "raw/tutorials/python/images/document_image_rId9.png",
-    "raw/tutorials/python/images/document_image_rId91.png"
+    "raw/tutorials/python教程/images/document_image_rId119.png",
+    "raw/tutorials/python教程/images/document_image_rId131.png",
+    "raw/tutorials/python教程/images/document_image_rId125.png",
+    "raw/tutorials/python教程/images/document_image_rId94.png",
+    "raw/tutorials/python教程/images/document_image_rId80.png",
+    "raw/tutorials/python教程/images/document_image_rId57.png",
+    "raw/tutorials/python教程/images/document_image_rId43.png",
+    "raw/tutorials/python教程/images/document_image_rId42.png",
+    "raw/tutorials/python教程/images/document_image_rId56.png",
+    "raw/tutorials/python教程/images/document_image_rId81.png",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/python-概述.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/comparisons/浅拷贝与深拷贝.md",
+    "wiki/comparisons/浅拷贝与深拷贝.md",
+    "wiki/comparisons/多进程与多线程.md",
+    "wiki/comparisons/编译型与解释型语言.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/comparisons/编译型与解释型语言.md",
+    "wiki/overview.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/迭代器与生成器.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/变量与常量.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/practice/协程下载图片.md",
+    "raw/tutorials/python教程/20261012_Python（V3.0)教程_尚硅谷.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/practice/答题闯关游戏.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/高阶函数与lambda.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/闭包.md",
+    "AGENTS.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/协程与asyncio.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/模块与包.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/文件操作.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/进程与线程入门.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/继承与多态.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/面向对象基础.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts/装饰器.md",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/practice",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/concepts",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki/comparisons",
+    "diff/20261015Python教程尚硅谷_ingest/pages/wiki",
+    "diff/20261015Python教程尚硅谷_ingest/pages",
+    "diff/20261015Python教程尚硅谷_ingest",
+    "diff/20261015_Python教程_尚硅谷_ingest/pages/wiki/practice",
+    "diff/20261015_Python教程_尚硅谷_ingest/pages/wiki/concepts",
+    "diff/20261015_Python教程_尚硅谷_ingest/pages/wiki/comparisons",
+    "diff/20261015_Python教程_尚硅谷_ingest/pages/wiki"
   ]
 }

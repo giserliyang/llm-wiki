@@ -6,5 +6,6 @@
   "attachmentFolderPath": "raw/images",
   "useMarkdownLinks": false,
   "newLinkFormat": "shortest",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "showLineNumber": true
 }
